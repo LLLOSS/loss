@@ -1,3 +1,5 @@
+# Where the Journey Begins
+
 <blockquote>
 Fate comes and goes, and parting is inevitable;  
 Blossoms bloom and fade, returning to dust.
