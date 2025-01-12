@@ -4,4 +4,8 @@
          <loc>https://mydomain.org/mysite/</loc>
          <lastmod>2025-01-12</lastmod>
     </url>
+    <url>
+         <loc>https://mydomain.org/mysite/%E7%AC%AC%E4%B8%80%E5%A4%A9/</loc>
+         <lastmod>2025-01-12</lastmod>
+    </url>
 </urlset>
