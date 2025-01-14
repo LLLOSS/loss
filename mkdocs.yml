@@ -30,7 +30,7 @@ theme:
   features:
     - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
     - navigation.instant
-    #- header.autohide  #自动隐藏
+    # - header.autohide #自动隐藏
     - navigation.instant.progress
     # - navigation.prune #渲染的 HTML 中仅包含可见的导航项
     - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
@@ -52,11 +52,24 @@ theme:
     - content.action.view
     - content.code.annotate
 
+#edit_uri: edit/main/docs # 编辑按钮跳转的链接
+repo_url: https://github.com/LLLOSS/loss # 右上角点击跳转的链接
+repo_name: LOSS.github # 右上角的名字
+
 plugins:
   - search
   - blog
   - tags
 
 nav:
-  - Home:
-      - index.md
+  #- Home:
+  #   - index.md
+  - 技术:
+      - 函数空间与向量空间对比: my/量子力学.md
+      - "for test": my/11.md
+
+copyright: Copyright &copy; 2025~ Zjh_LOSS/All Rights Reserved. # 左下角的版权声明
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/LLLOSS
