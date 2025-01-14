@@ -1,0 +1,1538 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/my/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">
+      
+      
+      
+        <link rel="next" href="../11/">
+      
+      
+      <link rel="icon" href="../../images/heidashuai.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>函数空间与向量空间对比 - Echoes of LOSS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Echoes of LOSS" class="md-header__button md-logo" aria-label="Echoes of LOSS" data-md-component="logo">
+      
+  <img src="../../image/heidashuai.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Echoes of LOSS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              函数空间与向量空间对比
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/LLLOSS/loss" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    LOSS.github
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  技术
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Echoes of LOSS" class="md-nav__button md-logo" aria-label="Echoes of LOSS" data-md-component="logo">
+      
+  <img src="../../image/heidashuai.jpg" alt="logo">
+
+    </a>
+    Echoes of LOSS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/LLLOSS/loss" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    LOSS.github
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    技术
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            技术
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    函数空间与向量空间对比
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    函数空间与向量空间对比
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间与函数空间
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="向量空间与函数空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量与函数的分解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xn" class="md-nav__link">
+    <span class="md-ellipsis">
+      幂函数 $x^n$（泰勒级数展开）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      幂函数 $x^n$（洛朗级数展开）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-cosnx-rm-sinnx" class="md-nav__link">
+    <span class="md-ellipsis">
+      三角函数 ${\rm cos}(nx)$ 和 ${\rm sin}(nx)$（傅里叶级数展开）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einx" class="md-nav__link">
+    <span class="md-ellipsis">
+      复指数函数 $e^{inx}$（复数形式的傅里叶级数）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间和函数空间性质的对比
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="向量空间和函数空间性质的对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      内积
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内积">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量的内积
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数的内积
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      正交性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="正交性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间中的正交性：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数空间中的正交性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      单位化（归一化）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单位化（归一化）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间中的单位化：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数空间中的单位化：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      投影
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="投影">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间中的投影
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数空间中的投影
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    for test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间与函数空间
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="向量空间与函数空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量与函数的分解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xn" class="md-nav__link">
+    <span class="md-ellipsis">
+      幂函数 $x^n$（泰勒级数展开）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      幂函数 $x^n$（洛朗级数展开）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-cosnx-rm-sinnx" class="md-nav__link">
+    <span class="md-ellipsis">
+      三角函数 ${\rm cos}(nx)$ 和 ${\rm sin}(nx)$（傅里叶级数展开）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einx" class="md-nav__link">
+    <span class="md-ellipsis">
+      复指数函数 $e^{inx}$（复数形式的傅里叶级数）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间和函数空间性质的对比
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="向量空间和函数空间性质的对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      内积
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内积">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量的内积
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数的内积
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      正交性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="正交性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间中的正交性：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数空间中的正交性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      单位化（归一化）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单位化（归一化）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间中的单位化：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数空间中的单位化：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      投影
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="投影">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量空间中的投影
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数空间中的投影
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/LLLOSS/loss/edit/master/docs/my/量子力学.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/LLLOSS/loss/raw/master/docs/my/量子力学.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">函数空间与向量空间对比</h1>
+<p><center><div style='height:2mm;'></div><div style="font-family:华文楷体;font-size:12pt;">张君豪-22373056</div></center>
+<center><span style="font-family:华文楷体;font-size:11pt;line-height:9mm">2025.1.14</span>
+</center></p>
+<p>在初学量子力学时，就觉得它和线性代数关系密切，就像是线性代数的”应用题“一样，现简单做一个总结对比，帮助更好理解，这对学习傅里叶变换和信号与系统也有帮助。</p>
+<h2 id="_2">向量空间与函数空间</h2>
+<h3 id="_3">向量与函数的分解</h3>
+<p>在《线性代数》课程中，已经了解到任意向量$$ ( \vec{v} \in \mathbb{R}^n )$$ 可以表示为一组基向量${ \vec{e_1}, \vec{e_2}, \dots, \vec{e_n} } $的线性组合： 
+$$
+\vec{v} = c_1 \vec{e_1} + c_2 \vec{e_2} + \dots + c_n \vec{e_n}
+$$
+在数学中，<strong>基函数</strong>是函数空间中特定基底的元素。函数空间中的每个连续函数可以表示为基函数的线性组合，就像向量空间中的每个向量可以表示为基向量的线性组合一样。</p>
+<p>在函数空间中，类似地，任意函数$f(x)$可以表示为一组基函数的线性组合：
+$$
+f(x) = c_1 \varphi_1(x) + c_2 \varphi_2(x) + c_3 \varphi_3(x) + \cdots
+$$
+其中，${\varphi_1(x), \varphi_2(x), \varphi_3(x), \cdots}$ 是该函数空间的一组基函数，${c_1, c_2, c_3, \cdots } $ 是线性组合系数。</p>
+<p>当然了，这对基向量和基函数都是有要求的，下边进行一一分析。</p>
+<p>在向量空间中，基向量需要满足以下条件：</p>
+<ul>
+<li><strong>线性无关 (linear independence)</strong>： 
+  对任意相异的 $e_1, e_2, \dots, e_n \in \mathbb{R}^n$ 和任意的 $\lambda_1, \lambda_2, \dots, \lambda_n \in K$，（$ K$表示数域，在此假定成实数域或者复数域均可）若 </li>
+</ul>
+<p>$$
+\lambda_1 \cdot e_1 + \lambda_2 \cdot e_2 + \cdots + \lambda_n \cdot e_n = 0_V
+$$
+则 
+$$
+\lambda_1 = \lambda_2 = \dots = \lambda_n = 0_K
+$$</p>
+<ul>
+<li><strong>生成律 (spanning property)</strong>： 
+  对任意 $v \in V$，存在相异向量 $e_1, e_2, \dots, e_n \in \mathfrak{B}$ 和标量 $\lambda_1, \lambda_2, \dots, \lambda_n \in K$ 使得 </li>
+</ul>
+<p>$$
+\lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n = v
+$$
+按照个人理解，总结下来，在向量空间中，基向量需要满足以下条件：</p>
+<ul>
+<li>
+<p><strong>线性无关</strong>：任意基向量的线性组合等于零时，所有系数必须为零，即：</p>
+</li>
+<li>
+<p><strong>极大性</strong>：基向量的数量等于空间的维度，且不能再添加新的线性无关向量。</p>
+</li>
+</ul>
+<p>类似地，在函数空间中，基函数的选择通常需要满足以下条件：</p>
+<ul>
+<li>
+<p><strong>线性无关</strong>：任意基函数的线性组合等于零时，所有系数必须为零。</p>
+</li>
+<li>
+<p><strong>完备性</strong>：基函数能够表示空间中的任意函数，即：</p>
+</li>
+</ul>
+<p><strong>结论：</strong> 向量空间中的“线性无关”和“极大无关组”对应于函数空间中的“线性无关”和“完备性”。</p>
+<p>可以举一些例子</p>
+<h3 id="xn">幂函数 $x^n$（泰勒级数展开）</h3>
+<p>基函数：<br />
+$$
+{1, x, x^2, x^3, \dots }, \text{即 } x^n, \text{其中 } n \text{ 为自然数。}
+$$</p>
+<p>任何满足一定条件的函数 $f(x)$（通常要求函数在某点连续可导），可以展开为幂函数的线性组合：<br />
+$$
+f(x) = \sum_{n=0}^\infty c_n x^n
+$$
+其中，<br />
+$$
+c_n = \frac{f^{(n)}(a)}{n!}
+$$
+是展开系数，称为泰勒展开的系数。</p>
+<h3 id="xn_1">幂函数 $x^n$（洛朗级数展开）</h3>
+<p>基函数：<br />
+$$
+{x^n : n \in \mathbb{Z}}, \text{即 } x^n, \text{其中 } n \text{ 为整数，包括正数、零和负数。}
+$$</p>
+<p>洛朗级数是一种扩展的泰勒级数，用于表示在复平面中具有奇点的解析函数： 
+$$
+f(x) = \sum_{n=-\infty}^\infty c_n x^n
+$$
+其中，$c_n$ 为洛朗级数的展开系数。</p>
+<p>洛朗级数用于研究复变函数，尤其是具有孤立奇点的函数（~~我已经忘了~~）。</p>
+<hr />
+<h3 id="rm-cosnx-rm-sinnx">三角函数 ${\rm cos}(nx)$ 和 ${\rm sin}(nx)$（傅里叶级数展开）</h3>
+<p>基函数： 
+$$
+{{\rm cos}(nx), {\rm sin}(nx) : n \in \mathbb{N}}, \text{即以正弦和余弦函数为基函数，} n \text{ 为自然数。}
+$$</p>
+<p>展开方式： 
+特别地，周期函数 $f(x)$（周期为 $2\pi$）可以表示为三角函数的线性组合：<br />
+$$
+f(x) = a_0 + \sum_{n=1}^\infty \left( a_n {\rm cos}(nx) + b_n {\rm sin}(nx) \right)
+$$</p>
+<p>其中，$a_n$ 和 $b_n$ 为傅里叶系数，计算公式如下：</p>
+<p>$$
+a_0 = \frac{1}{\pi} \int_0^T f(x) \, dx
+$$</p>
+<p>$$
+a_n = \frac{1}{\pi} \int_0^T f(x) \cos\left({n} x\right) \, dx \quad (n \geq 1)
+$$</p>
+<p>$$
+b_n = \frac{1}{\pi} \int_0^T f(x) \sin\left( n x\right) \, dx \quad (n \geq 1)
+$$</p>
+<p>一般地，周期函数 $f(x)$（周期为 $T$）,可选取以下作为基函数：
+$$
+{{\rm cos}(n\Omega x), {\rm sin}(n \Omega x) : n \in \mathbb{N}}, \text{即以正弦和余弦函数为基函数} 
+ n \text{ 为自然数\ ,}\ \ \Omega = \frac{2 \pi}{T}
+$$
+可以表示为三角函数的线性组合：
+$$
+f(x) = a_0 + \sum_{n=1}^\infty \left( a_n \cos\left(\frac{2\pi n}{T} x\right) + b_n \sin\left(\frac{2\pi n}{T} x\right) \right)
+$$</p>
+<p>其中，$T$ 是周期，$a_n$ 和 $b_n$ 为傅里叶系数，计算公式如下：</p>
+<p>$$
+a_0 = \frac{2}{T} \int_0^T f(x) \, dx
+$$</p>
+<p>$$
+a_n = \frac{2}{T} \int_0^T f(x) \cos\left(\frac{2\pi n}{T} x\right) \, dx \quad (n \geq 1)
+$$</p>
+<p>$$
+b_n = \frac{2}{T} \int_0^T f(x) \sin\left(\frac{2\pi n}{T} x\right) \, dx \quad (n \geq 1)
+$$</p>
+<hr />
+<h3 id="einx">复指数函数 $e^{inx}$（复数形式的傅里叶级数）</h3>
+<p>基函数 ：
+$$
+{e^{inx} : n \in \mathbb{Z}}, \text{即复指数函数，其中 } n \text{ 为整数。}
+$$</p>
+<p>展开方式：
+周期函数 $f(x)$（周期为 $2\pi$）也可以用复数形式表示：
+$$
+f(x) = \sum_{n=-\infty}^\infty c_n e^{inx}
+$$
+其中，$c_n$ 为复数形式的傅里叶系数，其计算公式为： 
+$$
+c_n = \frac{1}{T} \int_0^T f(x) e^{-i nx} \, dx
+$$</p>
+<p>更一般地，考虑周期为T的函数，可选取基函数：
+$$
+{e^{i\frac{2\pi n}{T}x} : n \in \mathbb{Z}}, \text{即复指数函数，其中 } n \text{ 为整数，周期为 } T。
+$$</p>
+<p><strong>展开方式：</strong> 
+周期函数 $f(x)$（周期为 $T$）可以用复数形式表示： 
+$$
+f(x) = \sum_{n=-\infty}^\infty c_n e^{i\frac{2\pi n}{T}x}
+$$
+其中，$c_n$ 为复数形式的傅里叶系数，其计算公式为： 
+$$
+c_n = \frac{1}{T} \int_0^T f(x) e^{-i\frac{2\pi n}{T}x} \, dx。
+$$</p>
+<p>在初学时，我一直有个疑问，为什么在这里求解$c_n$的时候$f(x)$要乘以$e^{-i\frac{2\pi n}{T}x}$作积分而不是$e^{i\frac{2\pi n}{T}x}$。同时，在学习量子力学时，我们发现作积分是常常要牵涉到函数的共轭。这些疑问只需简单了解复数函数的内积就可以解开。</p>
+<p>稍稍总结一下，不同的基函数选择适用于不同的数学和工程领域，比如泰勒级数适合局部展开，傅里叶级数适合处理周期函数，后者在量子力学中很常用。</p>
+<h2 id="_4">向量空间和函数空间性质的对比</h2>
+<h3 id="_5">内积</h3>
+<h4 id="_6">向量的内积</h4>
+<p>在线性代数中，尽管基向量的选取相对灵活，但在实际选取中，我们常常希望基向量单位化和正交化，这样选取的基向量具有较好的性质。我们首先给出向量和函数的内积，并引入模长的概念。</p>
+<p>内积是将两个向量映射到一个标量上，用于定义向量之间的角度和长度。</p>
+<p>给定向量 $\vec{u}, \vec{v} \in \mathbb{R}^n$，其内积为：<br />
+$$
+\langle \vec{u}, \vec{v} \rangle = \sum_{i=1}^n u_i v_i
+$$</p>
+<p>据此可定义向量的模长（“长度”），由内积定义为： 
+$$
+|\vec{u}| = \sqrt{\langle \vec{u}, \vec{u} \rangle} = \sqrt{\sum_{i=1}^n u_i^2}
+$$
+模长具有以下性质：</p>
+<p><strong>非负性</strong>：$|\vec{u}| \geq 0$，且 $|\vec{u}| = 0$ 当且仅当 $\vec{u} = \vec{0}$。</p>
+<p><strong>正定性</strong>：$\langle \vec{u}, \vec{u} \rangle &gt; 0$ 对于所有非零向量 $\vec{u}$。</p>
+<h4 id="_7">函数的内积</h4>
+<p>在函数空间中，<strong>内积</strong>的定义通常为两个函数在定义域上的加权积分。考虑<strong>复数函数</strong> $f(x)$ 和 $g(x)$，其内积为： 
+$$
+\langle f, g \rangle = \int_a^b f(x) g^*(x) \, dx
+$$</p>
+<p>类似于向量，可定义函数的模长定义为： 
+$$
+|f| = \sqrt{\langle f, f \rangle} = \sqrt{\int_a^b |f(x)|^2 \, dx}
+$$
+其中，$|f(x)|^2 = f(x) f^*(x)$。</p>
+<p>我最初一直理解为什么在量子力学中大量出现对复数函数共轭求积分的情况，在这里能够解答部分疑惑。类比向量模长的<strong>正定性</strong>，就能理解为什么复数函数内积牵涉到复共轭：</p>
+<p>对于复数函数，如果直接定义内积为 $\langle f, g \rangle = \int_a^b f(x) g(x) \, dx$，会导致模长无法满足正定性。例如，取 $f(x) = i$，则：<br />
+$$
+\langle f, f \rangle = \int_a^b i \cdot i \, dx = \int_a^b -1 \, dx = -(b-a) &lt; 0
+$$
+模长成为负值，违背正定性要求。</p>
+<p>引入复共轭后，模长变为： 
+$$
+\langle f, f \rangle = \int_a^b f(x) f^*(x) \, dx = \int_a^b |f(x)|^2 \, dx \geq 0
+$$
+且只有当 $f(x) = 0$ 时，模长为零，满足正定性。</p>
+<p>在量子力学中，函数的模长用于描述量子态的“归一化”条件，即：
+$$
+|\varphi| = 1 \quad \Rightarrow \quad \int_a^b |\varphi (x)|^2 \, dx =  \int_a^b \varphi (x) \cdot \varphi^* (x) \, dx = 1
+$$
+这表示找到粒子在空间中的概率总和为 $1$。</p>
+<hr />
+<p>总结下来，通过上述定义，函数空间的内积与模长可以满足与向量空间相同的核心性质（非负性、正定性）。这为我们进一步研究函数空间的正交性、单位化以及投影奠定了基础。</p>
+<h3 id="_8">正交性</h3>
+<h4 id="_9">向量空间中的正交性：</h4>
+<p>如果两个向量的内积为零，则称它们是正交的： 
+$$
+\langle \vec{u}, \vec{v} \rangle = 0
+$$</p>
+<p>可以直观地理解为“垂直”。</p>
+<h4 id="_10">函数空间中的正交性</h4>
+<p>类似地，如果两个函数 $f(x)$ 和 $g(x)$ 满足： 
+$$
+\langle f, g \rangle = \int_a^b f(x) g^*(x) w(x) \, dx = 0
+$$
+则称它们是正交的。</p>
+<p>傅里叶级数中的基函数，以下每一组函数都是彼此正交的基函数。
+$$
+{{\rm cos}(nx), {\rm sin}(nx) : n \in \mathbb{N}}, \text{即以正弦和余弦函数为基函数，} n \text{ 为自然数。}
+$$</p>
+<p>$$
+{{\rm cos}(n\Omega x), {\rm sin}(n \Omega x) : n \in \mathbb{N}}, \text{即以正弦和余弦函数为基函数} 
+ n \text{ 为自然数\ ,}\ \ \Omega = \frac{2 \pi}{T}
+$$</p>
+<p>$$
+{e^{inx} : n \in \mathbb{Z}}, \text{即复指数函数，其中 } n \text{ 为整数。}
+$$</p>
+<p>$$
+{e^{i\frac{2\pi n}{T}x} : n \in \mathbb{Z}}, \text{即复指数函数，其中 } n \text{ 为整数，周期为 } T。
+$$</p>
+<h3 id="_11">单位化（归一化）</h3>
+<h4 id="_12">向量空间中的单位化：</h4>
+<p>通过将向量除以其模长，可以得到单位向量：</p>
+<p>$$
+\vec{e} = \frac{\vec{v}}{|\vec{v}|}
+$$</p>
+<h4 id="_13">函数空间中的单位化：</h4>
+<p>对于函数 $f(x)$，归一化的条件是其内积为 1：</p>
+<p>$$
+\langle f, f \rangle = \int_a^b |f(x)|^2  \, dx = 1
+$$</p>
+<p>在量子力学中，波函数的归一化条件是：</p>
+<p>$$
+\int_{-\infty}^\infty |\psi(x)|^2 \, dx = 1
+$$</p>
+<p>这意味着粒子在整个空间中的存在概率为 1。</p>
+<p>量子力学中，正交性用于描述不同量子态之间的相互独立性。归一化正交基 ${ | \phi_n \rangle }$ 满足：</p>
+<p>$$
+\langle \phi_n | \phi_m \rangle = \int_{-\infty}^{\infty} \phi_n^*(x) \phi_m(x) \, dx = \delta_{nm}
+$$</p>
+<p>这是我们计算量子态叠加的重要基础。</p>
+<h3 id="_14">投影</h3>
+<h4 id="_15">向量空间中的投影</h4>
+<p>假设 ${\vec{e}_1, \vec{e}_2, \dots, \vec{e}_n}$ 是一组<strong>正交化</strong>的基向量，即满足： 
+$$
+\langle \vec{e}_i, \vec{e}_j \rangle = 0 \quad (i \neq j)
+$$
+但不要求 $\langle \vec{e}_i, \vec{e}_i \rangle = 1$（未归一）。</p>
+<p>对于任意向量 $\vec{v} \in \mathbb{R}^n$，可以表示为基向量的线性组合：<br />
+$$
+\vec{v} = c_1 \vec{e}_1 + c_2 \vec{e}_2 + \cdots + c_n \vec{e}_n
+$$</p>
+<p>为求得系数 $c_k$，计算 $\vec{v}$ 在基向量 $\vec{e}_k$ 上的内积： 
+$$
+\langle \vec{v}, \vec{e}_k \rangle = \langle c_1 \vec{e}_1 + c_2 \vec{e}_2 + \cdots + c_n \vec{e}_n, \vec{e}_k \rangle
+$$</p>
+<p>利用内积的线性性质，展开后为： 
+$$
+\langle \vec{v}, \vec{e}_k \rangle = c_1 \langle \vec{e}_1, \vec{e}_k \rangle + c_2 \langle \vec{e}_2, \vec{e}_k \rangle + \cdots + c_n \langle \vec{e}_n, \vec{e}_k \rangle
+$$</p>
+<p>由于 ${\vec{e}_i}$ 是<strong>正交化</strong>的基向量，仅保留 $i = k$ 的项： 
+$$
+\langle \vec{v}, \vec{e}_k \rangle = c_k \langle \vec{e}_k, \vec{e}_k \rangle
+$$</p>
+<p>设 $\langle \vec{e}_k, \vec{e}_k \rangle = |\vec{e}_k|^2$，即 $\vec{e}_k$ 的模长平方，则： 
+$$
+c_k = \frac{\langle \vec{v}, \vec{e}_k \rangle}{|\vec{e}_k|^2}
+$$</p>
+<p>这就是系数 $c_k$ 的表达式，其中模长的平方起到<strong>归一化</strong>的作用，可以称其为向量在某一方向上的投影。</p>
+<p>由此，向量 $\vec{v}$ 可以分解为：
+$$
+\vec{v} = \frac{\langle \vec{v}, \vec{e}_1 \rangle}{|\vec{e}_1|^2} \vec{e}_1 + \frac{\langle \vec{v}, \vec{e}_2 \rangle}{|\vec{e}_2|^2} \vec{e}_2 + \cdots + \frac{\langle \vec{v}, \vec{e}_n \rangle}{|\vec{e}_n|^2} \vec{e}_n
+$$</p>
+<p>每一项 $\frac{\langle \vec{v}, \vec{e}_k \rangle}{|\vec{e}_k|^2} \vec{e}_k$ 表示 $\vec{v}$ 在基向量 $\vec{e}_k$ 上的投影。</p>
+<h4 id="_16">函数空间中的投影</h4>
+<p>类似地，在函数空间中，假设 ${\phi_n(x)}$ 是定义在区间 $[a, b]$ 上的一组正交化基函数，即满足： 
+$$
+\langle \phi_n, \phi_m \rangle = \int_a^b \phi_n(x) \phi_m^*(x) \, dx = 0 \quad (n \neq m)
+$$
+但暂不要求归一化 $\langle \phi_n, \phi_n \rangle = 1$。</p>
+<p>对于任意平方可积函数 $f(x)$，可以表示为： 
+$$
+f(x) = c_1 \phi_1(x) + c_2 \phi_2(x) + \cdots
+$$</p>
+<p>现试图计算 $f(x)$ 在某个基函数 $\phi_k(x)$ 上的系数 $c_k$： 
+$$
+\langle f, \phi_k \rangle = \int_a^b f(x) \phi_k^*(x) \, dx
+$$</p>
+<p>展开后为： 
+$$
+\langle f, \phi_k \rangle = c_1 \int_a^b \phi_1(x) \phi_k^<em>(x) \, dx + c_2 \int_a^b \phi_2(x) \phi_k^</em>(x) \, dx + \cdots
+$$</p>
+<p>由于 ${\phi_n(x)}$ 是<strong>正交化</strong>基函数，仅保留 $n = k$ 的项： 
+$$
+\langle f, \phi_k \rangle = c_k \int_a^b \phi_k(x) \phi_k^*(x) \, dx
+$$</p>
+<p>设 $\langle \phi_k, \phi_k \rangle = |\phi_k|^2 = \int_a^b \phi_k(x) \phi_k^<em>(x) \, dx$，则： 
+$$
+c_k = \frac{\langle f, \phi_k \rangle}{|\phi_k|^2} = \frac{\int_a^b f(x) \phi_k^</em>(x) \, dx}{\int_a^b \phi_k(x) \phi_k^*(x) \, dx}
+$$</p>
+<p>这说明了投影系数 $c_k$ 的表达式，其中<strong>模长平方起到归一化作用</strong>,也解答了我在初学时一直对出现复共轭的疑问。</p>
+<p>由此，函数 $f(x)$ 可以分解为： 
+$$
+f(x) = \frac{\langle f, \phi_1 \rangle}{|\phi_1|^2} \phi_1(x) + \frac{\langle f, \phi_2 \rangle}{|\phi_2|^2} \phi_2(x) + \cdots
+$$</p>
+<p>在量子力学中，波函数 $\psi(x)$ 可以分解为一组正交基 ${\phi_n(x)}$ 的线性组合： 
+$$
+\psi(x) = \frac{\langle \psi, \phi_1 \rangle}{|\phi_1|^2} \phi_1(x) + \frac{\langle \psi, \phi_2 \rangle}{|\phi_2|^2} \phi_2(x) + \cdots
+$$</p>
+<p>投影系数 $\frac{\langle \psi, \phi_k \rangle}{|\phi_k|^2}$ 表示 $\psi(x)$ 在基态 $\phi_k(x)$ 上的分量，其物理意义为基态 $\phi_k(x)$ 出现的<strong>概率幅度</strong>。 </p>
+<p>波函数的归一化条件要求总概率为 1，即： 
+$$
+\sum_k \frac{|\langle \psi, \phi_k \rangle|^2}{|\phi_k|^2} = 1
+$$</p>
+<p>这保证了量子态的物理意义。</p>
+<h1 id="dirac"><strong>波函数、Dirac 表示与矩阵表示的对比</strong></h1>
+<h2 id="_17"><strong>微观粒子的运动状态</strong></h2>
+<h3 id="_18">表示形式</h3>
+<h4 id="_19"><strong>波函数表示：</strong></h4>
+<p>微观粒子状态通过波函数 $\psi(x)$ 描述，模平方 $|\psi(x)|^2$ 表示粒子在位置 $x$ 的概率密度。</p>
+<p>波函数满足薛定谔方程：
+$$
+i\hbar \frac{\partial \psi(x,t)}{\partial t} = \hat{H} \psi(x,t)
+$$</p>
+<h4 id="dirac_1"><strong>Dirac 表示</strong></h4>
+<p>在 Dirac 表示中，量子态通过<strong>态矢量</strong> $|\psi\rangle$ 表示，称为右矢，是波函数的一种抽象形式。</p>
+<p>对于任意算符 $\hat{A}$，其作用在态矢量上表现为：
+$$
+\hat{A} |\psi\rangle
+$$</p>
+<p>相应地，左矢是右矢的共轭转置，用 $\langle \psi|$ 表示。</p>
+<p>如果右矢 $|\psi\rangle$ 是列向量~~（当然这有点像矩阵表示）~~：
+$$
+|\psi\rangle = \begin{pmatrix}
+a_1 \
+a_2 \
+\vdots \
+a_n
+\end{pmatrix}
+$$</p>
+<p>则左矢 $\langle \psi|$ 是其共轭转置，即：</p>
+<p>$$
+\langle \psi| = \begin{pmatrix}
+a_1^<em> &amp; a_2^</em> &amp; \cdots &amp; a_n^*
+\end{pmatrix}
+$$</p>
+<h4 id="_20"><strong>矩阵表示</strong></h4>
+<p>在矩阵表示中，态矢量表示为列向量：
+$$
+|\psi\rangle = \begin{pmatrix} a_1 \ a_2 \ \vdots \ a_n \end{pmatrix}
+$$
+相应的力学量（算符）用<strong>矩阵</strong>表示，态的演化可通过<strong>矩阵运算</strong>进行。</p>
+<h3 id="_21">归一化、束缚态、游离态</h3>
+<h4 id="_22"><strong>波函数表示</strong></h4>
+<p><strong>归一化条件</strong>：
+$$
+\int |\psi(x)|^2 dx = 1
+$$
+<strong>束缚态</strong>：</p>
+<p>波函数在无穷远趋于零：
+$$
+\lim_{|x| \to \infty} \psi(x) = 0
+$$
+能量对应哈密顿算符的离散本征值。</p>
+<p><strong>游离态</strong>：</p>
+<p>波函数在无穷远处不归零，通常为平面波形式：
+$$
+\psi(x) \sim e^{ikx}
+$$
+能量对应哈密顿算符的连续本征值。</p>
+<h4 id="dirac_2"><strong>Dirac 表示</strong></h4>
+<p><strong>归一化条件</strong>：
+$$
+\langle \psi | \psi \rangle = 1
+$$
+<strong>束缚态</strong>：</p>
+<p>能量离散，对应哈密顿算符的离散本征值 ${E_n}$：
+$$
+\hat{H} |\psi_n\rangle = E_n |\psi_n\rangle
+$$
+态矢量在<strong>完备基</strong>中展开为有限和：
+$$
+|\psi\rangle = \sum_n c_n |\psi_n\rangle
+$$
+<strong>游离态</strong>：</p>
+<p>能量连续，对应哈密顿算符的连续本征值 ：
+$$
+\hat{H} |\psi_E\rangle = E |\psi_E\rangle
+$$
+游离态的正交性用狄拉克归一化表示（真正交，假归一）：
+$$
+\langle \psi_E | \psi_{E'} \rangle = \delta(E - E')
+$$</p>
+<h4 id="_23"><strong>矩阵表示</strong></h4>
+<p><strong>归一化条件</strong>：
+$$
+\psi^\dagger \psi = 1
+$$
+<strong>束缚态</strong>：</p>
+<p>本征值为离散的矩阵特征值。</p>
+<p>对应的态分量在有限维空间中用列向量表示。</p>
+<p><strong>游离态</strong>：</p>
+<p>本征值为连续的矩阵特征值。</p>
+<p>对应态分量在无穷维空间中表示。</p>
+<h3 id="_24">正交</h3>
+<h4 id="_25"><strong>波函数表示</strong></h4>
+<p>在波函数表示中，不同状态的正交性表明波函数的内积为零，即：</p>
+<p>$$
+\int \psi_m^*(x) \psi_n(x) dx = 0, \quad m \neq n
+$$</p>
+<p>对于连续谱中的游离态，其正交性满足狄拉克归一化条件：</p>
+<p>$$
+\int \psi_E^*(x) \psi_{E'}(x) dx = \delta(E - E')
+$$</p>
+<h4 id="dirac_3"><strong>Dirac 表示中</strong></h4>
+<p>在 Dirac 表示中，量子态的正交性体现在内积为零：</p>
+<p>$$
+\langle \psi_m | \psi_n \rangle = 0, \quad m \neq n
+$$</p>
+<p>对于离散谱的束缚态，正交性条件为：
+$$
+\langle \psi_n | \psi_m \rangle = \delta_{nm}
+$$</p>
+<p>对于连续谱的游离态，正交性条件满足狄拉克归一化：
+$$
+\langle \psi_E | \psi_{E'} \rangle = \delta(E - E')
+$$</p>
+<h4 id="_26"><strong>矩阵表示</strong></h4>
+<p>在矩阵表示中，态矢量的正交性用向量内积表示：</p>
+<p>$$
+\psi_m^\dagger \psi_n = 0, \quad m \neq n
+$$</p>
+<p>其中 $\psi_m^\dagger$ 是态矢量 $\psi_m$ 的共轭转置。</p>
+<p>对于离散态的正交性：</p>
+<p>$$
+\psi_n^\dagger \psi_m = \delta_{nm}
+$$</p>
+<p>对于连续态的正交性，满足狄拉克归一化条件：</p>
+<p>$$
+\psi_E^\dagger \psi_{E'} = \delta(E - E')
+$$</p>
+<h2 id="_27"><strong>力学量</strong></h2>
+<h3 id="_28"><strong>矩阵元</strong></h3>
+<p><strong>波函数表示</strong>：</p>
+<p>矩阵元通过波函数积分定义：
+$$
+A_{ij} = \int \psi_i^<em>(x) \hat{A} \psi_j(x) dx
+$$
+</em><em>Dirac 表示</em>*：</p>
+<p>矩阵元表示为：
+$$
+A_{ij} = \langle \phi_i | \hat{A} | \phi_j \rangle
+$$
+<strong>矩阵表示</strong>：</p>
+<p>力学量 $\hat{A}$ 的矩阵表示为：
+$$
+A_{ij} = \psi_i^\dagger \hat{A} \psi_j
+$$</p>
+<h3 id="_29"><strong>共轭算符</strong></h3>
+<p><strong>波函数表示：</strong></p>
+<p>在波函数表示中，共轭算符 $\hat{A}^\dagger$ 满足：</p>
+<p>$$
+\int \psi^<em>(x) \left(\hat{A}^\dagger \phi(x)\right) dx = \int \left(\hat{A} \psi(x)\right)^</em> \phi(x) dx
+$$</p>
+<p><strong>Dirac 表示：</strong></p>
+<p>在 Dirac 表示中，共轭算符 $\hat{A}^\dagger$ 满足：</p>
+<p>$$
+\langle \psi | \hat{A}^\dagger \phi \rangle = \langle \phi | \hat{A} \psi \rangle^*
+$$</p>
+<p><strong>矩阵表示：</strong></p>
+<p>在矩阵表示中，共轭算符 $\hat{A}^\dagger$ 表现为矩阵的共轭转置：</p>
+<p>$$
+A^\dagger = (A^*)^T
+$$</p>
+<h3 id="_30"><strong>厄米算符</strong></h3>
+<p><strong>波函数表示</strong>：
+波函数表示下，厄米算符的性质可以通过积分形式表示出来：
+$$
+\int \phi^<em>(x) \hat{A} \psi(x) \, dx = \int \psi^</em>(x) \hat{A} \phi(x) \, dx
+$$
+<strong>Dirac 表示</strong>：
+$$
+\langle \phi | \hat{A} | \psi \rangle = \langle \psi | \hat{A} | \phi \rangle^<em>
+$$
+</em><em>矩阵表示</em><em>：
+$$
+A_{ij} = A^</em>_{ji}
+$$</p>
+<h2 id="_31">力学量的本征方程</h2>
+<p><strong>波函数表示</strong>
+$$
+\hat{A} \psi = a \psi
+$$
+<strong>Dirac 表示</strong>：
+$$
+\hat{A} |\psi\rangle = a |\psi\rangle
+$$
+<strong>矩阵表示</strong>：
+$$
+A \psi = a \psi
+$$</p>
+<p>~~不知道写点啥~~</p>
+<h2 id="_32"><strong>态的线性叠加</strong></h2>
+<p><strong>波函数表示</strong></p>
+<p>量子态波函数的线性叠加为：
+$$
+\psi = c_1 \psi_1 + c_2 \psi_2 + ···
+$$
+ <strong>Dirac 表示</strong></p>
+<p>态矢量的线性叠加为：
+$$
+|\psi\rangle = c_1 |\psi_1\rangle + c_2 |\psi_2\rangle + ···
+$$
+<strong>矩阵表示</strong></p>
+<p>向量叠加为：
+$$
+\psi = c_1 \psi_1 + c_2 \psi_2 + ···
+$$</p>
+<h2 id="_33"><strong>力学量的平均值</strong></h2>
+<p><strong>波函数表示</strong>：</p>
+<p>平均值通过积分定义为：
+$$
+\langle A \rangle = \int \psi^<em>(x) \hat{A} \psi(x) dx
+$$
+</em><em>Dirac 表示</em>*：</p>
+<p>平均值表示为：
+$$
+\langle A \rangle = \langle \psi | \hat{A} | \psi \rangle
+$$
+<strong>矩阵表示</strong>：</p>
+<p>平均值为：
+$$
+\langle A \rangle = \psi^\dagger A \psi
+$$
+最后这一部分不知道该写些什么，可能是我学艺不精吧。整理至此。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+        
+          
+          <a href="../11/" class="md-footer__link md-footer__link--next" aria-label="下一页: for test">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                for test
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025~ Zjh_LOSS/All Rights Reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/LLLOSS" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.code.select", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
