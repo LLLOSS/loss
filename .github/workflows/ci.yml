@@ -41,4 +41,4 @@ jobs:
       - run: pip install --upgrade --force-reinstall mkdocs-material
       - run: mkdocs gh-deploy --force
       - run: pip install pymdownx-arithmatex
-      #- run: pip install mdx_math_svg
+      - run: pip install mkdocs-minify-plugin
