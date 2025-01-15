@@ -1,0 +1,13 @@
+# 忽略 mkdocs.yml 文件
+mkdocs.yml
+
+# 忽略整个目录
+G:/Code/GitHub/loss/docs
+
+# 忽略所有的 JavaScript 文件
+*.js
+
+# 忽略特定路径中的文件
+G:/Code/GitHub/loss/mkdocs.yml
+
+mkdocs.yml

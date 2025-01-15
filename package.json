@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "remark-mdx-math-enhanced": "^0.0.1-beta.3"
+  }
+}
