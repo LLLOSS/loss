@@ -123,7 +123,8 @@ extra_css:
   - _css/flink.css
   # - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css
   # - https://cdn.jsdelivr.net/npm/cn-fontsource-lxgw-wen-kai-gb-screen@1.0.6/font.min.css
-  - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css
+  ###- https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css
+  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   # - https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css
@@ -133,8 +134,11 @@ extra_javascript:
   - _js/extra.js
 #  - _js/mathjax.js
   - _js/katex.js
-  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js
-  - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js
+  #- https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js
+  ###- https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js
+  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 #####
 # #  - https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/extra.js  # extra的cdn
 #   - javascripts/mathjax.js
