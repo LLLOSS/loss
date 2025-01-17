@@ -2,30 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mydomain.org/mysite/</loc>
-         <lastmod>2025-01-15</lastmod>
-    </url>
-    <url>
-         <loc>https://mydomain.org/mysite/The%20First%20Echo%20of%20LOSS/</loc>
-         <lastmod>2025-01-15</lastmod>
+         <lastmod>2025-01-17</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/tag/</loc>
-         <lastmod>2025-01-15</lastmod>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/CourseNotes/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/</loc>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/CourseNotes/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Reflections/The%20First%20Echo%20of%20LOSS/</loc>
+         <lastmod>2025-01-17</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/</loc>
-         <lastmod>2025-01-15</lastmod>
-    </url>
-    <url>
-         <loc>https://mydomain.org/mysite/my/11/</loc>
-         <lastmod>2025-01-15</lastmod>
-    </url>
-    <url>
-         <loc>https://mydomain.org/mysite/my/test1/</loc>
-         <lastmod>2025-01-15</lastmod>
-    </url>
-    <url>
-         <loc>https://mydomain.org/mysite/my/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/</loc>
-         <lastmod>2025-01-15</lastmod>
+         <lastmod>2025-01-17</lastmod>
     </url>
 </urlset>
