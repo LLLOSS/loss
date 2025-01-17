@@ -1,0 +1,108 @@
+h1 {
+  counter-reset: h2;
+}
+
+h2 {
+  counter-reset: h3;
+}
+
+h3 {
+  counter-reset: h4;
+}
+
+h4 {
+  counter-reset: h5;
+}
+
+h5 {
+  counter-reset: h6;
+}
+
+h2:before {
+  counter-increment: h2;
+  content: counter(h2);
+  margin-right: 0.8rem;
+}
+
+h3:before {
+  counter-increment: h3;
+  content: counter(h2) "." counter(h3);
+  margin-right: 0.8rem;
+}
+
+h4:before {
+  counter-increment: h4;
+  content: counter(h2) "." counter(h3) "." counter(h4);
+  margin-right: 0.8rem;
+}
+
+h5:before {
+  counter-increment: h5;
+  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5);
+  margin-right: 0.8rem;
+}
+
+h6:before {
+  counter-increment: h6;
+  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6);
+  margin-right: 0.8rem;
+}
+
+
+
+.admonition.note {
+  background-color: #f9f9f9cc;
+  /* 填充色：稍微带灰色透明感 */
+  border-left: 5px solid #d3d3d3 !important;
+  /* 边框颜色：浅灰色 */
+  border-top: 1px solid #d3d3d3 !important;
+  border-right: 1px solid #d3d3d3 !important;
+  border-bottom: 1px solid #d3d3d3 !important;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.admonition.note .admonition-title {
+  color: #b25fdc;
+  /* 设置标题颜色 */
+}
+
+/* .admonition.note p {
+  font-size: 16px;
+  /* 修改框内文本大小 
+} */
+.admonition.advice {
+  background-color: #f9f9f9cc;
+  /* 填充色：稍微带灰色透明感 */
+  border-left: 5px solid #d3d3d3 !important;
+  /* 边框颜色：浅灰色 */
+  border-top: 1px solid #d3d3d3 !important;
+  /* 边框颜色：浅灰色 */
+  border-right: 1px solid #d3d3d3 !important;
+  /* 边框颜色：浅灰色 */
+  border-bottom: 1px solid #d3d3d3 !important;
+  /* 边框颜色：浅灰色 */
+  padding: 10px;
+  /* 内边距 */
+  border-radius: 8px;
+  /* 圆角 */
+  /* 设置文本居中 */
+  box-sizing: border-box;
+  /* 包括内边距和边框 */
+  margin: auto;
+  /* 居中 */
+}
+
+
+
+/* 完全隐藏并移除图标的空间 */
+.admonition.advice .admonition-icon {
+  display: none !important;
+}
+
+.admonition.advice .admonition-title {
+  background-color: transparent;
+  /* 去掉标题背景色，使其与整体背景一致 */
+  /* color: #b25fdc; */
+  /* 设置标题颜色 */
+}

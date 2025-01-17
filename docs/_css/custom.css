@@ -262,7 +262,7 @@ input#mkdocs-content-password {
 }
 
 .toc-tag-reports {
-  background-color: #3f6ec6b0;
+   background-color: #3f6ec6b0; 
 }
 
 .toc-tag-reports::before {

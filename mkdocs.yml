@@ -1,15 +1,16 @@
-site_name: "Echoes of LOSS"
+site_name: "LOSS's Notebook"
 site_url: https://mydomain.org/mysite
 
 
 edit_uri: https://github.com/LLLOSS/loss/tree/main/docs # 编辑按钮跳转的链接
 repo_url: https://github.com/LLLOSS/loss # 右上角点击跳转的链接
 repo_name: LOSS.github # 右上角的名字
+copyright: Copyright &copy; 2025~ LOSS_zjh Rights Reserved. # 左下角的版权声明
 
 theme:
   name: material
   language: zh
-  favicon: _assets/iro/IroPatch_Brown.ico
+  favicon: images/heidashuai_yuan.png"
   icon:
     # logo: material/pac-man
     logo: octicons/paper-airplane-16
@@ -46,7 +47,7 @@ theme:
     - search.highlight
     - search.share
     # - navigation.prune
-  custom_dir: overrides
+  #custom_dir: overrides
 
 plugins:
   - minify
@@ -116,19 +117,23 @@ markdown_extensions:
   - pymdownx.tilde
   #- mdx_math
 
-# KaTeX cdn from: [ https://www.bootcdn.cn/KaTeX/ ]
+#KaTeX cdn from: [ https://www.bootcdn.cn/KaTeX/ ]
 
 extra_css:
-  - _css/extra.css
+  #- _css/extra.css
   - _css/flink.css
+  - _css/counter.css
+  - _css/custom.css
+  - _css/tasklist.css
+  - _css/card.css
+  #- _css/changelog_extra.css
   # - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css
   # - https://cdn.jsdelivr.net/npm/cn-fontsource-lxgw-wen-kai-gb-screen@1.0.6/font.min.css
   ###- https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-  # - https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css
-
+  #- https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css
 
 extra_javascript:
   - _js/extra.js
@@ -146,10 +151,11 @@ extra_javascript:
 #   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 # # #####
 nav:
-  - 首页: 
+  - Home: 
     - index.md
-    - my/11.md
-  - First Echo: The First Echo of LOSS.md
-  - 技术:
-      - 函数空间与向量空间对比: my/量子力学.md
-  - 标签: tag.md
+  - 学研札记:
+      - 函数空间与向量空间对比: CourseNotes/函数空间与向量空间对比.md
+      - 波函数、Dirac表示与矩阵表示的对比: CourseNotes/波函数、Dirac表示与矩阵表示的对比.md
+  - 知行笺:
+      - The first day: Reflections/The First Echo of LOSS.md
+  #- 标签: tag.md
