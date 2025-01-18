@@ -8,24 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/blog/">
+        <link rel="canonical" href="https://mydomain.org/mysite/CourseNotes/analogue/6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/">
       
       
+        <link rel="prev" href="../7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/">
       
       
-      <link rel="icon" href="../images/heidashuai_yuan.png"">
+        <link rel="next" href="../5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/">
+      
+      
+      <link rel="icon" href="../../../images/heidashuai_yuan.png"">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
-        <title>Blog - LOSS's Notebook</title>
+        <title>共源共栅电流镜的设计 - LOSS's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -85,15 +89,15 @@
       
     
     
-      <link rel="stylesheet" href="../_css/flink.css">
+      <link rel="stylesheet" href="../../../_css/flink.css">
     
-      <link rel="stylesheet" href="../_css/counter.css">
+      <link rel="stylesheet" href="../../../_css/counter.css">
     
-      <link rel="stylesheet" href="../_css/custom.css">
+      <link rel="stylesheet" href="../../../_css/custom.css">
     
-      <link rel="stylesheet" href="../_css/tasklist.css">
+      <link rel="stylesheet" href="../../../_css/tasklist.css">
     
-      <link rel="stylesheet" href="../_css/card.css">
+      <link rel="stylesheet" href="../../../_css/card.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -101,14 +105,14 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -117,7 +121,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -134,7 +138,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#共源共栅电流镜的设计" class="md-skip">
           跳转至
         </a>
       
@@ -148,7 +152,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="LOSS&#39;s Notebook" class="md-header__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-header__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
@@ -168,7 +172,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              共源共栅电流镜的设计
             
           </span>
         </div>
@@ -256,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -272,11 +276,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../CourseNotes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -296,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-tabs__link">
+        <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-tabs__link">
           
   
     
@@ -331,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="LOSS&#39;s Notebook" class="md-nav__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-nav__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
@@ -382,7 +388,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href=".." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -414,6 +420,8 @@
       
   
   
+    
+  
   
   
     
@@ -434,19 +442,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -457,13 +468,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             学研札记
@@ -476,8 +487,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -509,11 +522,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -527,7 +540,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             模电
@@ -541,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/" class="md-nav__link">
+      <a href="../11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/10%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%BE%93%E5%85%A5%E7%AD%89%E6%95%88%E5%A4%B1%E8%B0%83%E7%94%B5%E5%8E%8B%E4%BC%98%E5%8C%96/" class="md-nav__link">
+      <a href="../10%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%BE%93%E5%85%A5%E7%AD%89%E6%95%88%E5%A4%B1%E8%B0%83%E7%94%B5%E5%8E%8B%E4%BC%98%E5%8C%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
+      <a href="../9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,10 +656,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    共源共栅电流镜的设计
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -655,6 +688,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一实验目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、实验目标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三v_b求解" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、\(V_{B}\)求解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四电路搭建" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、电路搭建
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -667,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/" class="md-nav__link">
+      <a href="../4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/3%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94/" class="md-nav__link">
+      <a href="../3%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/1%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../1%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +890,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -858,7 +947,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -938,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/quantum/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+      <a href="../../quantum/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/quantum/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+      <a href="../../quantum/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1037,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-nav__link">
+      <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,6 +1167,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一实验目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、实验目标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三v_b求解" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、\(V_{B}\)求解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四电路搭建" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、电路搭建
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1094,7 +1227,137 @@
   
 
 
-<h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
+<h1 id="共源共栅电流镜的设计">共源共栅电流镜的设计<a class="headerlink" href="#共源共栅电流镜的设计" title="Permanent link">&para;</a></h1>
+<p><center> <div style="height:2mm"><div style="fong-family:华文楷体;font-size:12pt;">
+2024.9.22
+</center></p>
+<h2 id="一实验目标">一、实验目标<a class="headerlink" href="#一实验目标" title="Permanent link">&para;</a></h2>
+<ul>
+<li>理解高输出摆幅共源共栅电流镜的原理及特性</li>
+<li>设计并搭建共源共栅电流镜电路，验证其基本工作原理。</li>
+</ul>
+<h2 id="二实验要求">二、实验要求<a class="headerlink" href="#二实验要求" title="Permanent link">&para;</a></h2>
+<ul>
+<li>如下图所示的共源共栅电流镜中，假设晶体管<span class="arithmatex">\(M_{1}\&amp;M_{2}\)</span>的过驱动电压 <span class="arithmatex">\((V_{GS}-V_{TH})_{1,2}=300mV\)</span>, <span class="arithmatex">\(M_{3}\&amp;M_{4}\)</span>的过驱动电压 <span class="arithmatex">\((V_{GS}-V_{TH})_{3,4}=100mV\)</span> ,所有晶体管的阈值电压 <span class="arithmatex">\(V_{TH}=400mV\)</span> ,理论求解<span class="arithmatex">\(V_{B}\)</span>的取值范围。</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage.png" width="50%"></a></p>
+<p align="center">
+图1：共源共栅电流镜
+</p>
+
+<ul>
+<li>在仿真软件中搭建类似电路，并寻找<span class="arithmatex">\(V_{B}\)</span>使得晶体管均进入饱和区。</li>
+</ul>
+<h2 id="三v_b求解">三、<span class="arithmatex">\(V_{B}\)</span>求解<a class="headerlink" href="#三v_b求解" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>为简化处理，不妨将<span class="arithmatex">\(M_{1}\&amp;M_{2}\)</span>的源极均接地。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(V_{B}\)</span>的范围求解</p>
+</li>
+<li>
+<p>首先思考，<span class="arithmatex">\(V_{B}\)</span>过大和过小带来的后果，那就是可能使某些管子<strong>掉入线性区</strong>，以此为入口求解</p>
+</li>
+<li>
+<p><span class="arithmatex">\(V_{B}\)</span>过大，<span class="arithmatex">\(M_{3}\)</span>管漏源电压可能小于过驱动电压使得调入线性区，因此需要：</p>
+<div class="arithmatex">\[
+V_{B}-V_{TH_{3}}&lt;V_{M_3\_D}=V_{GS_{1}}
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(V_{B}\)</span>过小，<span class="arithmatex">\(M_{3}\)</span>的源极可能没有开启，或者<span class="arithmatex">\(M_{1}\)</span>的漏极电压过小而掉入线性区，因此需要：</p>
+<div class="arithmatex">\[
+V_{B}-V_{GS_3}=V_{M_{1}\_D}\ &gt;\ V_{GS_{1}}-V_{TH_1}
+\]</div>
+</li>
+<li>
+<p>因此
+    $$
+    V_{GS_3}+V_{GS_{1}}-V_{TH_1} &lt; V_{B} &lt; V_{GS_{1}}+V_{TH_{3}}
+    $$</p>
+<div class="arithmatex">\[
+1V&lt;V_{B}&lt;1.1V
+\]</div>
+</li>
+</ul>
+<h2 id="四电路搭建">四、电路搭建<a class="headerlink" href="#四电路搭建" title="Permanent link">&para;</a></h2>
+<p>参照上学期的实验电路，选取<span class="arithmatex">\(I_{REF}\)</span>=100uA,作为电流源电流大小，<span class="arithmatex">\(\frac{W}{L}\)</span>=<span class="arithmatex">\(\frac{1um}{180nm}\)</span>，设计电路如图所示</p>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_19-59-02.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_19-59-02.jpg"></a></p>
+<p align="center">
+图2：原始电流
+</p>
+
+<p>为了产生图2所示的<span class="arithmatex">\(I_{out}\)</span>，给其挂上了10k的电阻负载。具体实验过程如下：</p>
+<ul>
+<li>对题目要求的<span class="arithmatex">\(V_{B}\)</span>(在图2中为v0，也即vdc)，进行DC扫描，以<span class="arithmatex">\(I_{out}-100uA\)</span>作为输出，参数设置和仿真图像分别如图3和图4</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-05-59.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-05-59.jpg"  width="40%"></a></p>
+<p align="center">
+图3：DC仿真参数
+</p>
+
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedded4ad38-5761-4f9d-a4e0-6b0b6b1f5cbb.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedded4ad38-5761-4f9d-a4e0-6b0b6b1f5cbb.png"></a></p>
+<p align="center">
+图4： I_out-100uA 关于Vdc的图像
+</p>
+
+<p>可以看出,在<span class="arithmatex">\(V_{dc}\)</span>,也即<span class="arithmatex">\(V_{B}\)</span>,大于1V以后，电流镜的镜像结果开始较为理想。</p>
+<ul>
+<li>对于<span class="arithmatex">\(V_{B}\)</span>的下限，通过对<span class="arithmatex">\(V_{B}\)</span>为1V时的op仿真，发现会使靠下的两个管子M1,M2处于线性区。考虑<span class="arithmatex">\(V_{B}\)</span>在1.1V,1.2V,1.3V,及以后的点挨个仿真，发现1.2V以后，M1,M2成功进入饱和区，<span class="arithmatex">\(V_{B}\)</span>=1.2V的op仿真结果如下：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_21-10-20.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_21-10-20.jpg" width="90%"></a></p>
+<p align="center">
+图5：Vb=Vdc=1.2V时op仿真结果
+</p>
+
+<ul>
+<li>对于<span class="arithmatex">\(V_{B}\)</span>的上限，从图中较难估计出来。首先考虑<span class="arithmatex">\(V_{B}\)</span>在1.3V,1.4V，1.5V，1.6V，1.7V这几个固定点进行op仿真，发现在1.6V及以后，mos管出现进入线性区的情况。如下图</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined405749ff-f1e5-4af9-ab9c-d05d59b944d6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined405749ff-f1e5-4af9-ab9c-d05d59b944d6.png" width="90%"></a></p>
+<p align="center">
+图6：Vb=Vdc=1.6V时op仿真结果
+</p>
+
+<ul>
+<li>
+<p>因此，<span class="arithmatex">\(V_{B}\)</span>的上限初步估计在1.5V至1.6V之间，与理论计算相比偏差较大，这是容易理解的，由于体效应的存在导致图中黄色方框里的mos管阈值电压增高，即 <span class="arithmatex">\(V_{TH_{3}}\)</span> 升高，结合（三）中的不等式，容易得到<span class="arithmatex">\(V_{B}\)</span>的上限会增高。当然也很大程度上也是因为仿真的器件参数跟题目参数不一样导致的。</p>
+</li>
+<li>
+<p>笔者本打算对<span class="arithmatex">\(V_{B}\)</span>=1500mV的op仿真对管子参数进行分析，却发现了一些不太能解释的现象如下：</p>
+</li>
+</ul>
+<div align="center">
+    <a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-49-57.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-49-57.jpg" width="90%"></a>
+<p align="center">
+图7：Vb=Vdc=1500mV时op仿真结果
+</p>
+
+
+  如图，仿真显示该管子工作在Saturati区，即饱和区，但是$V_{ds}\ <\ V_{gs}-V_{th}$,与所学知识产生了冲突。
+
+- 向AI求助，结果如下：
+
+  <a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedchat_screenshot%20(3)(1).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedchat_screenshot%20(3)(1).png" width="100%"></a>
+<p align="center">
+图8：AI的解释
+</p>
+
+
+  - 结论：仿真软件中$V_{ds}<V_{gs}-V_{th}$ 但器件被判定为饱和区，通常是由于仿真模型考虑了**更多的物理效应**，导致饱和区的判定标准与简化理论条件有所不同。
+
+- 按照仿真结果，初步给出让所有晶体管进入饱和区的一个比较良好和保险的区间：
+  $$
+  1.3V\ <\ V_{B}\ <\ 1.5V
+  $$
+
+## 五、实验总结
+
+- 实际仿真中，会考虑大量的物理效应，导致简单理论的结果会与仿真结果不一致甚至很不一致。
+
+- 这种结构的电流镜对电流的镜像精度较高，且电流较稳定。
+
+- 尽管仿真的参数和题目给的参数不同导致$V_{B}$的范围两问不一样，但是也能看出$V_{B}$被允许的区间长度其实是**较短**的，这就对实际器件中$V_{B}$的稳定性提出了较高的要求。
 
 
 
@@ -1151,14 +1414,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
       
-        <script src="../_js/extra.js"></script>
+        <script src="../../../_js/extra.js"></script>
       
-        <script src="../_js/katex.js"></script>
+        <script src="../../../_js/katex.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       

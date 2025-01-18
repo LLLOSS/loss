@@ -1,0 +1,1906 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/CourseNotes/analogue/8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/">
+      
+      
+        <link rel="prev" href="../9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/">
+      
+      
+        <link rel="next" href="../7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/">
+      
+      
+      <link rel="icon" href="../../../images/heidashuai_yuan.png"">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>密勒运算放大器的系统性设计 - LOSS's Notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 96a32 32 0 1 1-64 0 32 32 0 1 1 64 0m21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80H224c-17.7 0-32 14.3-32 32s14.3 32 32 32h32v208h-48c-53 0-96-43-96-96v-6.1l7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7v6.1c0 88.4 71.6 160 160 160h160c88.4 0 160-71.6 160-160v-6.1l7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7v6.1c0 53-43 96-96 96h-48V240h32c17.7 0 32-14.3 32-32s-14.3-32-32-32h-10.9z"/></svg>');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m368.4 18.3-55.7 55.8 125.2 125.2 55.7-55.7c21.9-21.9 21.9-57.3 0-79.2l-46-46.1c-21.9-21.9-57.3-21.9-79.2 0M288 94.6l-9.2 2.8-144.1 43.2c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-3.8 11.3-1 23.9 7.3 32.4l153.6-153.5c-3-6.3-4.7-13.3-4.7-20.7 0-26.5 21.5-48 48-48s48 21.5 48 48-21.5 48-48 48c-7.4 0-14.4-1.7-20.7-4.7L33.7 500.9c8.6 8.3 21.1 11.2 32.4 7.3l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 2.7-9.2z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M40 48c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24zm152 16c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zM16 232v48c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24v-48c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24m24 136c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24v-48c0-13.3-10.7-24-24-24z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2 5.2-7.1 10.4-14.2 15.4-21.4 19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3 5 7.2 10.2 14.3 15.4 21.4 19.8 27.1 39.7 54.4 49.2 86.2h160zm-80 128c44.2 0 80-35.8 80-80v-16H112v16c0 44.2 35.8 80 80 80m-80-336c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112 8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-86.2-346.7c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1 0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6-13.3 0-24-10.7-24-24v-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1 0-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1-64 0"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7.2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7 39.5 241.8 32 256 32m0 128c-13.3 0-24 10.7-24 24v112c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24m32 224a32 32 0 1 0-64 0 32 32 0 1 0 64 0"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c4.97 0 9 3.58 9 8s-6 10-9 10-9-5.58-9-10 4.03-8 9-8m-1.69 7.93C9.29 9.29 7.47 8.58 6.25 9.34s-1.38 2.71-.36 4.35c1.03 1.64 2.85 2.35 4.07 1.59 1.22-.78 1.37-2.71.35-4.35m3.38 0c-1.02 1.64-.87 3.57.35 4.35 1.22.76 3.04.05 4.07-1.59 1.02-1.64.86-3.59-.36-4.35s-3.04-.05-4.06 1.59M12 17.75c-2 0-2.5-.75-2.5-.75 0 .03.5 2 2.5 2s2.5-2 2.5-2-.5.75-2.5.75"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v11.5c0 49.9-60.3 74.9-95.6 39.6l-8.2-8.1C107.7 62.5 87.5 62.5 75 75s-12.5 32.8 0 45.3l8.2 8.2c35.2 35.2 10.2 95.5-39.7 95.5H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h11.5c49.9 0 74.9 60.3 39.6 95.6l-8.1 8.2c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l8.2-8.2c35.3-35.3 95.6-10.3 95.6 39.6V480c0 17.7 14.3 32 32 32s32-14.3 32-32v-11.5c0-49.9 60.3-74.9 95.6-39.6l8.2 8.2c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-8.2-8.2c-35.3-35.3-10.3-95.6 39.6-95.6h11.5c17.7 0 32-14.3 32-32s-14.3-32-32-32h-11.5c-49.9 0-74.9-60.3-39.6-95.6l8.2-8.2c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-8.2 8.2C348.3 118.4 288 93.4 288 43.5zM176 224a48 48 0 1 1 96 0 48 48 0 1 1-96 0m128 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32v64h120c39.8 0 72 32.2 72 72v272c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72h120V32c0-17.7 14.3-32 32-32M208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16zM264 256a40 40 0 1 0-80 0 40 40 0 1 0 80 0m152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80M48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48m544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 0H128c-17.7 0-32 14.3-32 32s14.3 32 32 32v132.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6 0 480.9 31.1 512 69.4 512h309.2c38.3 0 69.4-31.1 69.4-69.4 0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7 0 32-14.3 32-32S337.7 0 320 0zm-96 196.8V64h64v132.8c0 23.7 6.6 46.9 19 67.1l34.5 56.1h-171l34.5-56.1c12.4-20.2 19-43.4 19-67.1"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6 31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5 50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5l112.2-112.3c31.5-31.5 82.5-31.5 114 0 27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai+Screen+GB+Screen:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai Screen GB Screen";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../_css/flink.css">
+    
+      <link rel="stylesheet" href="../../../_css/counter.css">
+    
+      <link rel="stylesheet" href="../../../_css/custom.css">
+    
+      <link rel="stylesheet" href="../../../_css/tasklist.css">
+    
+      <link rel="stylesheet" href="../../../_css/card.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#密勒运算放大器的系统性设计" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-header__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LOSS's Notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              密勒运算放大器的系统性设计
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/LLLOSS/loss" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    LOSS.github
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  学研札记
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-tabs__link">
+          
+  
+    
+  
+  知行笺
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-nav__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
+
+    </a>
+    LOSS's Notebook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/LLLOSS/loss" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    LOSS.github
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    学研札记
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学研札记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    模电
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            模电
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电阻失配对 CMRR 的影响分析及仿真验证
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%BE%93%E5%85%A5%E7%AD%89%E6%95%88%E5%A4%B1%E8%B0%83%E7%94%B5%E5%8E%8B%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    五管OTA的输入等效失调电压优化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MOSFET噪声特性的标定与五管OTA的噪声优化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    密勒运算放大器的系统性设计
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    密勒运算放大器的系统性设计
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一实验目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、实验目标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三理论求解" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、理论求解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、理论求解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-指标设置与分配" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 指标设置与分配
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2使用g_mi_d方法确定关键晶体管m_1和m_6尺寸以及偏置电流" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.使用\(g_{m}/I_{d}\)方法确定关键晶体管\(M_1和M_6\)尺寸以及偏置电流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3利用偏置电流值和强反型区公式求解其余晶体管尺寸" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.利用偏置电流值和强反型区公式求解其余晶体管尺寸
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四仿真验证" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、仿真验证
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、仿真验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1静态工作点检查" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.静态工作点检查
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2指标检查" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.指标检查
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五参数修改" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、参数修改
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、参数修改">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1f_nd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.\(f_{nd}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2gbw" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.GBW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3最终电路图" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.最终电路图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4再看静态工作点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.再看静态工作点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#六实验总结与思考" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、实验总结与思考
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    反馈系统的稳定性分析与优化设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    共源共栅电流镜的设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    单极NMOS共源极放大器的设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MOSFET的弱反型区
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    频率响应
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    五管OTA的设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    共射放大器的设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    微电子器件物理
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            微电子器件物理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    电路分析
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            电路分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    量子力学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            量子力学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quantum/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    函数空间与向量空间对比
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quantum/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    波函数、Dirac表示与矩阵表示的对比
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    知行笺
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            知行笺
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The first day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一实验目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、实验目标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三理论求解" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、理论求解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、理论求解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-指标设置与分配" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 指标设置与分配
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2使用g_mi_d方法确定关键晶体管m_1和m_6尺寸以及偏置电流" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.使用\(g_{m}/I_{d}\)方法确定关键晶体管\(M_1和M_6\)尺寸以及偏置电流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3利用偏置电流值和强反型区公式求解其余晶体管尺寸" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.利用偏置电流值和强反型区公式求解其余晶体管尺寸
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四仿真验证" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、仿真验证
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、仿真验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1静态工作点检查" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.静态工作点检查
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2指标检查" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.指标检查
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五参数修改" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、参数修改
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、参数修改">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1f_nd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.\(f_{nd}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2gbw" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.GBW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3最终电路图" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.最终电路图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4再看静态工作点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.再看静态工作点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#六实验总结与思考" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、实验总结与思考
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="密勒运算放大器的系统性设计">密勒运算放大器的系统性设计<a class="headerlink" href="#密勒运算放大器的系统性设计" title="Permanent link">&para;</a></h1>
+<p><center> <div style="height:2mm"><div style="fong-family:华文楷体;font-size:12pt;">
+2024.10.14
+</center></p>
+<h2 id="一实验目标">一、实验目标<a class="headerlink" href="#一实验目标" title="Permanent link">&para;</a></h2>
+<ul>
+<li>掌握密勒放大器的设计方法，理解如何根据给定的性能指标（如增益带宽积、相位裕度、直流增益等）确定电路参数。</li>
+<li>更加理解和掌握<span class="arithmatex">\(g_{m}/I_{d}\)</span>这一工程方法，使放大器的各项性能指标达到设计要求。</li>
+<li>通过合理设置设计冗余，确保电路能够在实际应用中具有良好的容差和稳定性。</li>
+<li>验证通过理论计算确定的参数，通过仿真进行对比，确保实际结果符合理论预期，从而检验设计方法的有效性。</li>
+</ul>
+<h2 id="二实验要求">二、实验要求<a class="headerlink" href="#二实验要求" title="Permanent link">&para;</a></h2>
+<ul>
+<li>设计一典型密勒放大器，调节晶体管尺寸及偏置电流大小，使得运放满足800 MHz GBW，60°PM和50dB直流增益的要求。</li>
+</ul>
+<h2 id="三理论求解">三、理论求解<a class="headerlink" href="#三理论求解" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-12_23-43-31.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-12_23-43-31.jpg" width="75%"></a></p>
+<p align="center">
+图1：两级运算放大器
+</p>
+
+<h3 id="1-指标设置与分配">1. 指标设置与分配<a class="headerlink" href="#1-指标设置与分配" title="Permanent link">&para;</a></h3>
+<ul>
+<li>如上图所示是一个典型的密勒运算放大器，要求运放满足800 MHz GBW，60°PM和50dB直流增益的要求。<strong>在这里的负载电容<span class="arithmatex">\(C_{L}\)</span>直接设计为10pF</strong>。首先结合教材给出<span class="arithmatex">\(GBW、f_{nd}与f_{T6}\)</span>的关系</li>
+</ul>
+<div class="arithmatex">\[
+{GBW}=\frac{{g_{m1}}}{2\pi{~C_{c}}}
+\]</div>
+<div class="arithmatex">\[
+{f_{nd}~=~\frac{g_{m6}}{2\pi~C_{L}}\frac{1}{1+C_{n1}/C_{c}}}
+\]</div>
+<div class="arithmatex">\[
+GBW=\frac1{\alpha(\beta+1)\gamma}\cdot f_{T6}
+\]</div>
+<div class="arithmatex">\[
+C_{L}=\alpha C_{c}\ \ \ \ \ \ C_{c}=\beta C_{n1}= \beta C_{GS6}\ \ \ \ \ \ f_{nd}=\gamma GBW
+\]</div>
+<ul>
+<li>考虑冗余，分配两级增益</li>
+</ul>
+<div class="arithmatex">\[
+A_{0,6}=30dB\ \ \ \ A_{0,1}=30dB
+\]</div>
+<ul>
+<li>对于相位裕度PM，同样考虑冗余，使用72°，给出</li>
+</ul>
+<div class="arithmatex">\[
+\gamma = 3
+\]</div>
+<ul>
+<li>对于<span class="arithmatex">\(\alpha和\beta\)</span>，考虑典型值，并由此得到<span class="arithmatex">\(M_6\)</span>的特征频率<span class="arithmatex">\(f_{T}\)</span></li>
+</ul>
+<div class="arithmatex">\[
+\alpha =\beta = 2
+\\f_{T6}=\ \alpha(\beta+1)\gamma\ \ *GBW\ =14.4GHz
+\]</div>
+<h3 id="2使用g_mi_d方法确定关键晶体管m_1和m_6尺寸以及偏置电流">2.使用<span class="arithmatex">\(g_{m}/I_{d}\)</span>方法确定关键晶体管<span class="arithmatex">\(M_1和M_6\)</span>尺寸以及偏置电流<a class="headerlink" href="#2使用g_mi_d方法确定关键晶体管m_1和m_6尺寸以及偏置电流" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span class="arithmatex">\(M_{6}\)</span>管</p>
+</li>
+<li>
+<p>由<span class="arithmatex">\({f_{nd}~=~\frac{g_{m6}}{2\pi~C_{L}}\frac{1}{1+C_{n1}/C_{c}}}= \gamma GBW\ = 2.4GHz\)</span>，给出<span class="arithmatex">\(g_{m6}\)</span>:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+    g_{m6}=f_{nd}\ *\ 2\pi~C_{L}\ *\ (1+C_{n1}/C_{c}) = 226.08mA/V
+\]</div>
+<ul>
+<li><span class="arithmatex">\(M_{6}\)</span>管要求特征频率<span class="arithmatex">\(f_{T6}=14.4GHz以及本征增益A_{0,6}=30dB=32\)</span>,结合教材附录，同时考虑这两个参数，给出</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+L &amp;= 180nm \\[10pt]
+\frac{g_m}{I_d} &amp;= 13 \\[10pt]
+I_{d6} &amp;= \frac{g_{m6}}{13} = 17.4mA
+\end{align}
+\]</div>
+<ul>
+<li>由教材附录中NMOS晶体管单位尺寸电流与跨导效率的关系，求晶体管宽度：</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+\frac{g_m}{I_d} &amp;= 13 \text{ 时，} \frac{I_{D}}{(W/L)} = 25uA \\[10pt]
+\left( \frac{W}{L} \right)_{6} &amp;= \frac{17.4mA}{25uA} = 6960 \\[10pt]
+W &amp;= 180nm \times 6960 = 1252.8u
+\end{align}
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(M_{1}\)</span>管</p>
+</li>
+<li>
+<p>由<span class="arithmatex">\(GBW=\frac{g_{m1}}{2\pi C_c}\)</span>,得<span class="arithmatex">\(g_{m1}\)</span>:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+g_{m1}=25.12mA/V
+\]</div>
+<ul>
+<li><span class="arithmatex">\(M_{1}\)</span>管要求特征频率<span class="arithmatex">\(本征增益A_{0,1}=30dB=32\)</span>,结合教材附录，给出</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+L &amp;= 200nm \\[10pt]
+\frac{g_m}{I_d} &amp;= 11 \\[10pt]
+I_{d1} &amp;= \frac{g_{m1}}{11} = 2.28mA
+\end{align}
+\]</div>
+<ul>
+<li>教材附录中PMOS晶体管单位尺寸电流与跨导效率的关系，求晶体管宽度：</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+\frac{g_m}{I_d} &amp;= 11 \text{ 时，} \frac{I_{D}}{(W/L)} = 1.2uA \\[10pt]
+\left( \frac{W}{L} \right)_{6} &amp;= \frac{2.28mA}{1.2uA} = 1900 \\[10pt]
+W &amp;= 200nm \times 1900 = 380u
+\end{align}
+\]</div>
+<h3 id="3利用偏置电流值和强反型区公式求解其余晶体管尺寸">3.利用偏置电流值和强反型区公式求解其余晶体管尺寸<a class="headerlink" href="#3利用偏置电流值和强反型区公式求解其余晶体管尺寸" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(M_{2}\)</span>管尺寸同<span class="arithmatex">\(M_{1}\)</span></li>
+</ul>
+<div class="arithmatex">\[
+L=200nm\ \ \ \ \ W=380u
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(M_{3}\)</span>管</p>
+</li>
+<li>
+<p>考虑典型偏置电压<span class="arithmatex">\(V_{G}=0.6V\)</span></p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+I_{D3} &amp;= \frac{1}{2}\mu_{n}C_{ox}(W/L)_{3}(V_{GS}-V_{TH})^{2} \\[10pt]
+I_{D3} &amp;= I_{D1} = 2.28mA \\[10pt]
+\mu_nC_{ox} &amp;\approx 300 \, \mu A/V^2 \\[10pt]
+V_{TH} &amp;\approx 0.4 V
+\end{align}
+\]</div>
+<div class="arithmatex">\[
+\\解得\ \ \ \ \ \ (W/L)_{3}=380
+\]</div>
+<ul>
+<li>为尽量减小沟道长度调制效应的影响，选取长沟道器件:</li>
+</ul>
+<div class="arithmatex">\[
+L=1u\ \ \ \ \ W=380u
+\]</div>
+<ul>
+<li><span class="arithmatex">\(M_4\)</span>管同<span class="arithmatex">\(M_3\)</span>管</li>
+</ul>
+<div class="arithmatex">\[
+L=1u\ \ \ \ \ W=380u
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(M_5\)</span>管</p>
+</li>
+<li>
+<p>为防止PMOS进入线性区，考虑偏置电压<span class="arithmatex">\(V_{G}=1.2V\)</span></p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+I_{D5} &amp;= \frac{1}{2}\mu_{p}C_{ox}(W/L)_{5}(V_{SG}-V_{TH})^{2} \\[10pt]
+I_{D5} &amp;= I_{D6} = 17.4mA \\[10pt]
+\mu_{p}C_{ox} &amp;\approx 50 \, \mu A/V^2 \\[10pt]
+V_{TH} &amp;\approx 0.4V \\[10pt]
+\text{解得} \ (W/L)_{5} &amp;= 17400
+\end{align}
+\]</div>
+<ul>
+<li>为尽量减小沟道长度调制效应的影响，选取长沟道器件:</li>
+</ul>
+<div class="arithmatex">\[
+    L=0.5u\ \ \ \ \ W=8700u
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(M_7\)</span>管</p>
+</li>
+<li>
+<p>为防止PMOS进入线性区，考虑偏置电压<span class="arithmatex">\(V_{G}=1.2V\)</span></p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+I_{D7} &amp;= \frac{1}{2}\mu_{p}C_{ox}(W/L)_{7}(V_{SG}-V_{TH})^{2} \\[10pt]
+I_{D7} &amp;= 2I_{D1} = 4.56mA \\[10pt]
+\mu_{p}C_{ox} &amp;\approx 50 \, \mu A/V^2 \\[10pt]
+V_{TH} &amp;\approx 0.4V \\[10pt]
+\text{解得} \ (W/L)_{7} &amp;= 4560
+\end{align}
+\]</div>
+<ul>
+<li>为尽量减小沟道长度调制效应的影响，选取长沟道器件:</li>
+</ul>
+<div class="arithmatex">\[
+    L=0.5u\ \ \ \ \ W=2280u
+\]</div>
+<p>至此，所有器件的工作参数均已解出。</p>
+<h2 id="四仿真验证">四、仿真验证<a class="headerlink" href="#四仿真验证" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_14-34-30.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_14-34-30.jpg"></a></p>
+<p align="center">
+图2：密勒运算放大器
+</p>
+
+<ul>
+<li>按照（三）中求解出的参数，搭建如图2所示的电路。其中<span class="arithmatex">\(I_{D5}和I_{D7}\)</span>的电流借助电流镜结构来实现</li>
+</ul>
+<h4 id="1静态工作点检查">1.静态工作点检查<a class="headerlink" href="#1静态工作点检查" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_14-50-56.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_14-50-56.jpg"></a></p>
+<p align="center">
+图3：op仿真结果
+</p>
+
+<p>如图3所示，可以看出，静态工作点的仿真值与理论求解符合得很好。</p>
+<h4 id="2指标检查">2.指标检查<a class="headerlink" href="#2指标检查" title="Permanent link">&para;</a></h4>
+<ul>
+<li>电路已经被接成了单位增益负反馈的形式，将<span class="arithmatex">\(V_3\)</span>设置为直流电压为0,并令其交流小信号为1，即ACMAG=1。接着通过系统自带的计算器计算电压源两端电压比值v(Vout)/v(Vinn)即可得出环路增益，环路增益计算公式如图4所示</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_14-58-15.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_14-58-15.jpg"></a></p>
+<p align="center">
+图4：环路增益计算公式
+</p>
+
+<ul>
+<li>进行AC仿真，结果如下：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_23-05-11.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_23-05-11.jpg"></a></p>
+<p align="center">
+图5：AC仿真结果
+</p>
+
+<ul>
+<li>如图5所示，可以看出</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+\text{直流增益} A_0 &amp;= 63db = 1412 \\[10pt]
+\text{带宽} w_0 &amp;= 467.6K \\[10pt]
+\text{相位裕度} PM &amp;= 39.16^\circ \\[10pt]
+\text{增益带宽积} GBW &amp;= A_{0} \times w_0 = 660.25M
+\end{align}
+\]</div>
+<ul>
+<li>直流增益较大，但是带宽较小，导致增益带宽积未能达到要求。同时相位裕度也太低，需要对参数进行后续调试。</li>
+</ul>
+<h2 id="五参数修改">五、参数修改<a class="headerlink" href="#五参数修改" title="Permanent link">&para;</a></h2>
+<ul>
+<li>考虑GBW和次极点<span class="arithmatex">\(f_{nd}\)</span>的公式</li>
+</ul>
+<div class="arithmatex">\[
+  {f_{nd}~=~\frac{g_{m6}}{2\pi~C_{L}}\frac{1}{1+C_{n1}/C_{c}}}
+\]</div>
+<div class="arithmatex">\[
+  {GBW}=\frac{{g_{m1}}}{2\pi{~C_{c}}}
+\]</div>
+<ul>
+<li>
+<p>增大相位裕度需要增大次极点<span class="arithmatex">\(f_{nd}\)</span>与增益带宽积GBW的比值<span class="arithmatex">\(\gamma\)</span>。</p>
+</li>
+<li>
+<p>首先观察<span class="arithmatex">\(C_c\)</span>电容，发现，<span class="arithmatex">\(C_c\)</span>的降低可以增大GBW，但是会减小<span class="arithmatex">\(f_{nd}\)</span>，从而减小相位裕度。经过对<span class="arithmatex">\(C_{c}\)</span>的反复迭代，发现改善一个指标后，总会对另一个指标造成极大的破坏，最终决定不再改变<span class="arithmatex">\(C_c\)</span>的值，选择从其它参数入手改善性能。</p>
+</li>
+</ul>
+<h3 id="1f_nd">1.<span class="arithmatex">\(f_{nd}\)</span><a class="headerlink" href="#1f_nd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>只能选择增大<span class="arithmatex">\(g_{m6}\)</span>,考虑<span class="arithmatex">\(g_{m}\)</span>在强反型区下经典公式</li>
+</ul>
+<div class="arithmatex">\[
+  g_{m}=\mu_{p}C_{ox}(W/L)(V_{GS}-V_{TH})
+  \\g_{m}=\frac{I_D}{V_{GS}-V_{TH}}
+\]</div>
+<ul>
+<li>结合电路结构，偏置电压<span class="arithmatex">\(V_{GS}\)</span>应该较为稳定，决定<span class="arithmatex">\(g_m\)</span>的公式究竟是宽长比还是电流，很难说，在这里选择增大宽长比并且增大电流<span class="arithmatex">\(I_{D}\)</span>来增大<span class="arithmatex">\(g_{m6}\)</span>，经过反复迭代，将参数修改如下，其中经过反复迭代参数，发现将<span class="arithmatex">\(M_5\)</span>管的栅极电压降低对增大电流并增大<span class="arithmatex">\(g_{m6}\)</span>效果较好，当然了，这个<span class="arithmatex">\(V_{G}\)</span>也可以通过一个电流镜镜像得到，但是简化器件就直接用电压源来给出偏置电压了。</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_23-39-34.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_23-39-34.jpg"></a></p>
+<p align="center">
+图6：增大Id和W来增大次极点fnd
+</p>
+
+<ul>
+<li>进行op仿真和AC仿真来检查<span class="arithmatex">\(g_{m6}\)</span>和相位裕度PM，结果如下：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_23-48-39.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_23-48-39.jpg"></a></p>
+<p align="center">
+图7：op仿真
+</p>
+
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_23-50-14.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-13_23-50-14.jpg"></a></p>
+<p align="center">
+图8：AC仿真
+</p>
+
+<ul>
+<li>比目标相位裕度多了6°的冗余，为接下来调GBW留下了空间。</li>
+</ul>
+<h3 id="2gbw">2.GBW<a class="headerlink" href="#2gbw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>增大GBW，就要想办法增大<span class="arithmatex">\(g_{m1}\)</span>,同<span class="arithmatex">\(M_{6}\)</span>管类似，该PMOS的静态电压工作点是比较稳定的，而且改变静态电压对<span class="arithmatex">\(g_m\)</span>的改变也有有限。因此在这里选择增大宽长比并且增大电流<span class="arithmatex">\(I_{D}\)</span>来增大<span class="arithmatex">\(g_{m1}\)</span>，经过反复迭代，将参数修改如下:</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-14_00-02-44.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-14_00-02-44.jpg"></a></p>
+<p align="center">
+图9：增大gm1而调整的参数
+</p>
+
+<ul>
+<li>进行AC仿真，结果如下：
+  <a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-14_00-12-17.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-14_00-12-17.jpg"></a></li>
+</ul>
+<p align="center">
+图10：AC仿真结果
+</p>
+
+<ul>
+<li>由上图看出:</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+\text{直流增益} A_0 &amp;= 60.44db = 1051.96 \\[10pt]
+\text{带宽} w_0 &amp;= 811.7K \\[10pt]
+\text{相位裕度} PM &amp;= 62.12^\circ \\[10pt]
+\text{增益带宽积} GBW &amp;= A_{0} \times w_0 = 853.8M
+\end{align}
+\]</div>
+<h3 id="3最终电路图">3.最终电路图<a class="headerlink" href="#3最终电路图" title="Permanent link">&para;</a></h3>
+<ul>
+<li>至此所有指标均满足要求，以下是最终电路图</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-14_00-40-26.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-14_00-40-26.jpg" width="150%"></a></p>
+<p align="center">
+图11：最终结果
+</p>
+
+<h3 id="4再看静态工作点">4.再看静态工作点<a class="headerlink" href="#4再看静态工作点" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>忘了说，在图3中给出了静态工作点的理论值与实际值，发现符合得很好，其实在当时笔者还计算了<span class="arithmatex">\(M_{1}\)</span>和<span class="arithmatex">\(M_{6}\)</span>管的<span class="arithmatex">\(\frac{g_{m}}{I_{d}}\)</span>,发现仿真结果与理论值符合得很完美。<span class="arithmatex">\(M_1\)</span>管的<span class="arithmatex">\(\frac{g_{m}}{I_{d}}\)</span>理论值与仿真值分别为<strong>11</strong>和<strong>11.1</strong>，<span class="arithmatex">\(M_6\)</span>管的<span class="arithmatex">\(\frac{g_{m}}{I_{d}}\)</span>理论值与仿真值分别为<strong>13</strong>和<strong>12.95</strong>。</p>
+</li>
+<li>
+<p>现在对最终版本的op仿真给出，看看最终版本与原始设计偏离了多远。</p>
+</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-14_00-38-02.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-14_00-38-02.jpg" width="100%"></a></p>
+<p align="center">
+图12：红色为第一版    黄色为最终版
+</p>
+
+<ul>
+<li>可以看出，<span class="arithmatex">\(g_m\)</span>与<span class="arithmatex">\(I_d\)</span>的偏移都较大，但由于是成比例地偏移，导致最终<span class="arithmatex">\(\frac{g_m}{I_d}\)</span>的偏移不大。</li>
+</ul>
+<h2 id="六实验总结与思考">六、实验总结与思考<a class="headerlink" href="#六实验总结与思考" title="Permanent link">&para;</a></h2>
+<ul>
+<li>在参数修改的环节，在本次报告中占的篇幅不算大，但实际上花了我一个下午的时间迭代参数，得到的教训是十分深刻的：</li>
+<li><strong>初版设计与冗余分配</strong>：在本次设计中笔者只给增益留了设计冗余是60db，结果刚好就是60db，说明第一版的良好的设计还是十分有必要的。</li>
+<li><strong>设计冗余的重要性</strong>：PPT设计的时候给增益<span class="arithmatex">\(A_{0}\)</span>和GBW以及<span class="arithmatex">\(f_T\)</span>都留了50%的设计冗余，但是笔者忘记给GBW和<span class="arithmatex">\(f_T\)</span>留50%设计冗余了，导致后续被这两个参数死活折腾了很久。这提醒我在设计之初应考虑对所有关键指标留有冗余，以便在后续优化过程中具有<strong>更大</strong>的<strong>调整空间</strong>。</li>
+<li><strong>参数调整缺乏系统性</strong>：调参数的时候没有条理，像只无头苍蝇一样这动动那改改，并且没有记录每次动了什么以及因此带来的变化，导致离初版越来越远但是指标越来越烂。这个过程表明在参数调优时，必须<strong>系统地记录每次更改及其影响，以便追溯和分析</strong>。</li>
+<li><strong>对关键参数缺乏深入理解</strong>：没有抓住影响GBW和<span class="arithmatex">\(f_{nd}\)</span>的因素是两个跨导，没有抓住影响跨导的因素的参数是<strong>电流</strong>和<strong>宽长比</strong>（<strong>尤其是电流</strong>），对着偏置电压改了很久还把管子改进线性区。本题中偏置电压本身对跨导的影响没那么大。当然电流镜电路除外。这提醒我，在电路设计中，必须<strong>首先明确每个性能指标的关键影响因素</strong>，从根本上入手进行优化。</li>
+<li><strong>无法有效降低增益</strong>：起初一直想通过降低增益来换取其它指标的改善，但是遗憾的是改到最后也没找到降低增益的方法，增益一直在60db上挂着。</li>
+<li>最终的电路<span class="arithmatex">\(\frac{g_m}{I_d}\)</span>的偏移不大其实是意料之外的，但是笔者试图从更深层次理解和解释这个现象却并没有给出很好的解答。为什么呢？</li>
+<li>本次实验再次证明<span class="arithmatex">\(g_m\)</span>/<span class="arithmatex">\(I_d\)</span>作为一种工程方法的优越性和可靠性，从图3可以看出用该方法理论与实际符合得很好。</li>
+<li>还需要加强对电路中每个关键参数的理解，尤其是在高频电路设计中，如何<strong>有效控制次极点和 GBW 的平衡</strong>，进一步提高设计效率和最终电路性能。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025~ LOSS_zjh Rights Reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../_js/extra.js"></script>
+      
+        <script src="../../../_js/katex.js"></script>
+      
+        <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

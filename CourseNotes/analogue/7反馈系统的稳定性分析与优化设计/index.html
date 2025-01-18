@@ -8,24 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/blog/">
+        <link rel="canonical" href="https://mydomain.org/mysite/CourseNotes/analogue/7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/">
       
       
+        <link rel="prev" href="../8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/">
       
       
-      <link rel="icon" href="../images/heidashuai_yuan.png"">
+        <link rel="next" href="../6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/">
+      
+      
+      <link rel="icon" href="../../../images/heidashuai_yuan.png"">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
-        <title>Blog - LOSS's Notebook</title>
+        <title>反馈系统的稳定性分析与优化设计 - LOSS's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -85,15 +89,15 @@
       
     
     
-      <link rel="stylesheet" href="../_css/flink.css">
+      <link rel="stylesheet" href="../../../_css/flink.css">
     
-      <link rel="stylesheet" href="../_css/counter.css">
+      <link rel="stylesheet" href="../../../_css/counter.css">
     
-      <link rel="stylesheet" href="../_css/custom.css">
+      <link rel="stylesheet" href="../../../_css/custom.css">
     
-      <link rel="stylesheet" href="../_css/tasklist.css">
+      <link rel="stylesheet" href="../../../_css/tasklist.css">
     
-      <link rel="stylesheet" href="../_css/card.css">
+      <link rel="stylesheet" href="../../../_css/card.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -101,14 +105,14 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -117,7 +121,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -134,7 +138,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#反馈系统的稳定性分析与优化设计" class="md-skip">
           跳转至
         </a>
       
@@ -148,7 +152,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="LOSS&#39;s Notebook" class="md-header__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-header__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
@@ -168,7 +172,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              反馈系统的稳定性分析与优化设计
             
           </span>
         </div>
@@ -256,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -272,11 +276,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../CourseNotes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -296,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-tabs__link">
+        <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-tabs__link">
           
   
     
@@ -331,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="LOSS&#39;s Notebook" class="md-nav__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-nav__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
@@ -382,7 +388,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href=".." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -414,6 +420,8 @@
       
   
   
+    
+  
   
   
     
@@ -434,19 +442,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -457,13 +468,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             学研札记
@@ -476,8 +487,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -509,11 +522,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -527,7 +540,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             模电
@@ -541,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/" class="md-nav__link">
+      <a href="../11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/10%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%BE%93%E5%85%A5%E7%AD%89%E6%95%88%E5%A4%B1%E8%B0%83%E7%94%B5%E5%8E%8B%E4%BC%98%E5%8C%96/" class="md-nav__link">
+      <a href="../10%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%BE%93%E5%85%A5%E7%AD%89%E6%95%88%E5%A4%B1%E8%B0%83%E7%94%B5%E5%8E%8B%E4%BC%98%E5%8C%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
+      <a href="../9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -622,10 +635,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    反馈系统的稳定性分析与优化设计
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -634,6 +667,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一实验目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、实验目标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三理论求解" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、理论求解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四仿真验证" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、仿真验证
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五实验总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、实验总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -646,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/" class="md-nav__link">
+      <a href="../4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/3%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94/" class="md-nav__link">
+      <a href="../3%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,7 +828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/1%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../1%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +899,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -858,7 +956,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -938,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/quantum/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+      <a href="../../quantum/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/quantum/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+      <a href="../../quantum/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1037,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-nav__link">
+      <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,6 +1176,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一实验目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、实验目标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三理论求解" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、理论求解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四仿真验证" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、仿真验证
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五实验总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、实验总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1094,7 +1245,115 @@
   
 
 
-<h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
+<h1 id="反馈系统的稳定性分析与优化设计">反馈系统的稳定性分析与优化设计<a class="headerlink" href="#反馈系统的稳定性分析与优化设计" title="Permanent link">&para;</a></h1>
+<p><center> <div style="height:2mm"><div style="fong-family:华文楷体;font-size:12pt;">
+2024.10.7
+</center></p>
+<h2 id="一实验目标">一、实验目标<a class="headerlink" href="#一实验目标" title="Permanent link">&para;</a></h2>
+<ul>
+<li>理解增益带宽积与次极点相对位置和相位裕度的关系</li>
+<li>研究增益带宽积（GBW）与次极点位置对系统稳定性的影响</li>
+<li>确定反馈系数的最优值</li>
+<li>了解iwave中计算器（calculator）的使用方法</li>
+<li>掌握iwave属性的高级调节方式</li>
+</ul>
+<h2 id="二实验要求">二、实验要求<a class="headerlink" href="#二实验要求" title="Permanent link">&para;</a></h2>
+<ul>
+<li>在8.1.4小节的仿真实验的基础上，修改次级点位置至0.2倍的GBW处，根据反馈原理，为使闭环传递函数的幅频响应不存在尖峰，求解最大可接受的反馈系数，并通过仿真验证。</li>
+</ul>
+<h2 id="三理论求解">三、理论求解<a class="headerlink" href="#三理论求解" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_20-40-23.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_20-40-23.jpg" width="50%"></a></p>
+<p align="center">
+图1：反馈系统
+</p>
+
+<p>假设一放大器连接成如图所示的反馈形式，且其自身的直流增益、带宽、增益带宽积和次极点分别为<span class="arithmatex">\(A_{0}\)</span>、 <span class="arithmatex">\(w_{0}\)</span>、<span class="arithmatex">\(GBW_{0}和W_{p,nd}(均为角频率)\)</span>，则其开环传递函数为</p>
+<div class="arithmatex">\[
+H\left(s\right)=A_{0L}=\frac{A_{0}}{\left(1+\frac{s}{\omega_{0}}\right)\left(1+\frac{s}{\omega_{p,nd}}\right)}\approx\frac{GBW_{0}}{s\left(1+\frac{s}{\omega_{p,nd}}\right)}\\
+\]</div>
+<p>则形成闭环后的传递函数</p>
+<div class="arithmatex">\[
+T\left(s\right)=A_{\mathrm{CL}}=\frac{H(s)}{1+\beta H(s)}=\frac{\mathrm{GBW}_{0}}{\frac{1}{\omega_{\mathrm{p,nd}}}s^{2}+s+\beta\mathrm{GBW}_{0}}
+\]</div>
+<p>二阶控制系统的典型传递函数在时域和频域的表达式如下：</p>
+<p><strong>频域传递函数</strong> </p>
+<ul>
+<li>在频域，二阶控制系统的传递函数 <span class="arithmatex">\(G(s)\)</span> 通常可以表示为：</li>
+</ul>
+<div class="arithmatex">\[
+  G(s) = \frac{\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}
+  \]</div>
+<p>其中：</p>
+<ul>
+<li><span class="arithmatex">\(s\)</span> 是拉普拉斯变换中的复频率变量，</li>
+<li><span class="arithmatex">\($\omega_n$\)</span> 是系统的<strong>自然频率</strong>，</li>
+<li>(<span class="arithmatex">\(\zeta\)</span> ) 是系统的<strong>阻尼系数</strong>。</li>
+</ul>
+<p>则将闭环增益二阶相应函数与二阶系统控制函数<span class="arithmatex">\(Hs=s^2 + 2\zeta\omega_n s + \omega_n^2\)</span>进行对应转换，可得到该闭环相应的阻尼系数</p>
+<div class="arithmatex">\[
+\zeta= \frac{1}{2}\sqrt{\frac{\omega_{p,nd}}{\beta GBW_{0}}}
+\]</div>
+<p>考虑本题要求次级点位置至0.2倍的GBW处</p>
+<div class="arithmatex">\[
+\zeta= \frac{1}{2}\sqrt{\frac{1}{5 \beta}}
+\]</div>
+<p>按照教材上选取<span class="arithmatex">\(\zeta=\frac{\sqrt{2}}{2}\)</span>,这时系统处于临界阻尼状态(存疑)，幅频曲线较为平坦。因此：</p>
+<div class="arithmatex">\[
+\beta = 0.1
+\]</div>
+<h2 id="四仿真验证">四、仿真验证<a class="headerlink" href="#四仿真验证" title="Permanent link">&para;</a></h2>
+<ul>
+<li>如图，搭建教材8.1.4所示的电路</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_22-54-45.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_22-54-45.jpg" width="90%"></a></p>
+<p align="center">
+图2：测试电路
+</p>
+
+<ul>
+<li>设计参数如下</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_23-00-47.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_23-00-47.jpg"></a></p>
+<p align="center">
+图3：开环传递函数参数
+</p>
+
+<ul>
+<li>按照教材设定的AC仿真参数仿真，得到的闭环传递函数的波特图如下</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_23-46-20.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_23-46-20.jpg"></a></p>
+<p align="center">
+图4：闭环传递函数波特图
+</p>
+
+<p>可以看出，在此情况下，闭环传递函数的波特图十分平缓，未出现尖峰，系统没有稳定性问题。</p>
+<ul>
+<li>将<span class="arithmatex">\(\beta\)</span>适当上调为0.15，仿真得到的闭环传递函数的波特图幅频曲线上出现尖峰，从侧面证明理论求解的<span class="arithmatex">\(\beta\)</span> 是正确的。</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_23-51-35.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-06_23-51-35.jpg"></a></p>
+<p align="center">
+图5：提高β后的闭环传递函数波特图
+</p>
+
+<ul>
+<li>对开环传递函数观察，相位裕度为25度，剪切频率为4.3MHz。</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-07_00-04-58.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-07_00-04-58.jpg"></a></p>
+<p align="center">
+图6：剪切频率与相位裕度
+</p>
+
+<h2 id="五实验总结">五、实验总结<a class="headerlink" href="#五实验总结" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>仿真与理论结合：</strong>理论推导为反馈系数的选取提供了依据，而仿真进一步验证了理论的正确性。特别是在<span class="arithmatex">\(\beta\)</span>值上调至0.15后，出现了尖峰现象，证明了理论推导的<span class="arithmatex">\(\beta = 0.1\)</span>是最优选择。</p>
+</li>
+<li>
+<p><strong>增益带宽积与次极点位置的关系</strong>：次极点距离主极点<strong>越远</strong>，系统的<strong>相位裕度越大</strong>，说明系统在反馈条件下的<strong>稳定性越好</strong>。通过调整次极点至0.2倍GBW处，与教材进行对比，结合理论公式和波特图的变化，进一步验证了该结论。</p>
+</li>
+<li><strong>阻尼系数与反馈系数的调节</strong>：在选择反馈系数<span class="arithmatex">\(\beta\)</span>时，发现<span class="arithmatex">\(\beta\)</span>过大会引起系统的不稳定性，表现在闭环波特图中出现尖峰，幅频响应急剧变化。通过理论求解和仿真调整<span class="arithmatex">\(\beta\)</span>，确定<span class="arithmatex">\(\beta = 0.1\)</span>时系统达到临界阻尼状态，曲线平滑且无尖峰。</li>
+<li>熟练掌握iwave中计算器功能的使用，可以更灵活地处理复杂的表达式，提升仿真结果的处理效率。</li>
+</ul>
 
 
 
@@ -1151,14 +1410,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
       
-        <script src="../_js/extra.js"></script>
+        <script src="../../../_js/extra.js"></script>
       
-        <script src="../_js/katex.js"></script>
+        <script src="../../../_js/katex.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       

@@ -8,24 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/blog/">
+        <link rel="canonical" href="https://mydomain.org/mysite/CourseNotes/analogue/10%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%BE%93%E5%85%A5%E7%AD%89%E6%95%88%E5%A4%B1%E8%B0%83%E7%94%B5%E5%8E%8B%E4%BC%98%E5%8C%96/">
       
       
+        <link rel="prev" href="../11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/">
       
       
-      <link rel="icon" href="../images/heidashuai_yuan.png"">
+        <link rel="next" href="../9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/">
+      
+      
+      <link rel="icon" href="../../../images/heidashuai_yuan.png"">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
-        <title>Blog - LOSS's Notebook</title>
+        <title>五管OTA的输入等效失调电压优化 - LOSS's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -85,15 +89,15 @@
       
     
     
-      <link rel="stylesheet" href="../_css/flink.css">
+      <link rel="stylesheet" href="../../../_css/flink.css">
     
-      <link rel="stylesheet" href="../_css/counter.css">
+      <link rel="stylesheet" href="../../../_css/counter.css">
     
-      <link rel="stylesheet" href="../_css/custom.css">
+      <link rel="stylesheet" href="../../../_css/custom.css">
     
-      <link rel="stylesheet" href="../_css/tasklist.css">
+      <link rel="stylesheet" href="../../../_css/tasklist.css">
     
-      <link rel="stylesheet" href="../_css/card.css">
+      <link rel="stylesheet" href="../../../_css/card.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -101,14 +105,14 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -117,7 +121,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -134,7 +138,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#五管ota的输入等效失调电压优化" class="md-skip">
           跳转至
         </a>
       
@@ -148,7 +152,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="LOSS&#39;s Notebook" class="md-header__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-header__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
@@ -168,7 +172,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              五管OTA的输入等效失调电压优化
             
           </span>
         </div>
@@ -256,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -272,11 +276,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../CourseNotes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -296,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-tabs__link">
+        <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-tabs__link">
           
   
     
@@ -331,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="LOSS&#39;s Notebook" class="md-nav__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-nav__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
@@ -382,7 +388,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href=".." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -414,6 +420,8 @@
       
   
   
+    
+  
   
   
     
@@ -434,19 +442,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -457,13 +468,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             学研札记
@@ -476,8 +487,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -509,11 +522,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -527,7 +540,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             模电
@@ -541,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/" class="md-nav__link">
+      <a href="../11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -559,10 +572,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/10%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%BE%93%E5%85%A5%E7%AD%89%E6%95%88%E5%A4%B1%E8%B0%83%E7%94%B5%E5%8E%8B%E4%BC%98%E5%8C%96/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    五管OTA的输入等效失调电压优化
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -571,6 +604,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一实验目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、实验目标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三理论求解" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、理论求解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、理论求解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1晶体管面积尺寸设计" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1)晶体管面积尺寸设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2晶体管宽长尺寸设计" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2)晶体管宽长尺寸设计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三仿真验证" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、仿真验证
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四迭代电路" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、迭代电路
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五实验总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、实验总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -583,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
+      <a href="../9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/" class="md-nav__link">
+      <a href="../4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/3%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94/" class="md-nav__link">
+      <a href="../3%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/1%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../1%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +932,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -858,7 +989,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -938,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/quantum/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+      <a href="../../quantum/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/quantum/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+      <a href="../../quantum/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1037,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-nav__link">
+      <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,6 +1209,92 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一实验目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、实验目标
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三理论求解" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、理论求解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、理论求解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1晶体管面积尺寸设计" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1)晶体管面积尺寸设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2晶体管宽长尺寸设计" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2)晶体管宽长尺寸设计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三仿真验证" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、仿真验证
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四迭代电路" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、迭代电路
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五实验总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、实验总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1094,7 +1311,185 @@
   
 
 
-<h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
+<h1 id="五管ota的输入等效失调电压优化">五管OTA的输入等效失调电压优化<a class="headerlink" href="#五管ota的输入等效失调电压优化" title="Permanent link">&para;</a></h1>
+<p><center> <div style="height:2mm"><div style="fong-family:华文楷体;font-size:12pt;">
+2024.11.04
+</center></p>
+<h2 id="一实验目标">一、实验目标<a class="headerlink" href="#一实验目标" title="Permanent link">&para;</a></h2>
+<ul>
+<li>深入理解并学会计算运算放大器的随机性失调和系统性失调</li>
+<li>学会通过对电路参数的设计来满足系统性设计失调的设计要求</li>
+<li>学会使用蒙特卡罗仿真工具仿真电路中随机失调的情况</li>
+</ul>
+<h2 id="二实验要求">二、实验要求<a class="headerlink" href="#二实验要求" title="Permanent link">&para;</a></h2>
+<p>一个五管OTA如图1所示，共模电压为0.9V，设计晶体管的尺寸，使得电路的跨导<span class="arithmatex">\(g_m\)</span>大于1<span class="arithmatex">\(mA/V\)</span>，通过优化晶体管尺寸使等效输入失调电压尽可能接近N（0，<span class="arithmatex">\((0.25mV)^2\)</span>）的正态分布。</p>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241104205302.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241104205302.jpg" width="50%"></a></p>
+<p align="center">
+图1：五管OTA电路
+</p>
+
+<h2 id="三理论求解">三、理论求解<a class="headerlink" href="#三理论求解" title="Permanent link">&para;</a></h2>
+<h3 id="1晶体管面积尺寸设计">(1)晶体管面积尺寸设计<a class="headerlink" href="#1晶体管面积尺寸设计" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{align}
+V_{OS}&amp;=V_{OS1,2}+\frac{I_{OS3,4}}{g_{mP}}
+\\&amp;=\Delta V_{TH1,2}+\frac{\left(V_{GS}-V_{TH}\right)_{1,2}}{2}\left(\frac{\Delta\frac{W}{L}}{\frac{W}{L}}\right)_{1,2}+\frac{g_{m3,4}}{g_{m1,2}}\Delta V_{TH3,4}+\frac{\left(V_{GS}-V_{TH}\right)_{1,2}}{2}\left(\frac{\Delta\frac{W}{L}}{\frac{W}{L}}\right)_{3,4}
+\end{align}
+\]</div>
+<ul>
+<li>根据上式,在做初步设计时可以假设<strong>忽略尺寸失调</strong>带来的影响，从而专注对<strong>阈值电压失调</strong>的分析。</li>
+<li>假设差分对跨导是电流镜跨导的两倍，即 <span class="arithmatex">\(g_{\mathrm{mP}}=2g_{\mathrm{mN}}\)</span>。由于两个元件随机失调值均符合正态分布，则简化后的随机性等效输入失调公式为</li>
+</ul>
+<div class="arithmatex">\[
+\sigma_{V_{\mathrm{OS}}}^2=\sigma_{V_{\mathrm{THP}}}^2+\left(\frac{g_{\mathrm{mN}}}{g_{\mathrm{mP}}}\right)^2\times\sigma_{V_{\mathrm{THN}}}^2
+\]</div>
+<ul>
+<li>根据设计要求 <span class="arithmatex">\(\sigma_{V_{\mathrm{OS}}} &lt; 0.25\)</span> mV, 即 <span class="arithmatex">\(\sigma_{V_{\mathrm{OS}}}^2 &lt; 0.0625\)</span> (mV)<span class="arithmatex">\(^2\)</span>。已知 PMOS 晶体管和 NMOS 晶体管的阈值电压失调均满足同样的分布，不妨假设 <span class="arithmatex">\(\sigma_{V_{\mathrm{THP}}}^2 = \sigma_{V_{\mathrm{THN}}}^2\)</span>。结合上式可知应有：</li>
+</ul>
+<div class="arithmatex">\[
+  \frac{5}{4}·{\sigma^2_{V_{THP}}} ·2\leq 0.0625(mV)^2
+  \\解得{\sigma_{V_{THP}}}\leq 0.1581mV
+\]</div>
+<div class="arithmatex">\[
+\sigma_{\Delta V_{\mathrm{T}}} = \frac{A_{\mathrm{VT}}}{\sqrt{WL}}, \quad A_{\mathrm{VT}} \approx 3.6~\mathrm{mV \cdot \mu m}
+\]</div>
+<ul>
+<li>考虑设计冗余取<span class="arithmatex">\({\sigma_{V_{THP}}}=0.15mV\)</span>,带入上式得到：</li>
+</ul>
+<div class="arithmatex">\[
+WL = 576~\mathrm{\mu m}^2
+\]</div>
+<h3 id="2晶体管宽长尺寸设计">(2)晶体管宽长尺寸设计<a class="headerlink" href="#2晶体管宽长尺寸设计" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目要求<span class="arithmatex">\(g_{m2}&gt;1m\)</span>,则：</li>
+</ul>
+<div class="arithmatex">\[
+  g_{m2}=\frac{2I_{D}}{{{(V_{SG}-V_{TH})_2}}}=\frac{200\mu}{{{(V_{SG}-V_{TH})_2}}}&gt;1m
+  \\{{(V_{SG}-V_{TH})_2}}&lt;0.2V
+\]</div>
+<ul>
+<li>不妨令</li>
+</ul>
+<div class="arithmatex">\[
+  \frac{g_{m2}}{g_{m4}}=\frac{{(V_{GS}-V_{TH})_4}}{{(V_{SG}-V_{TH})_2}}=2
+\]</div>
+<ul>
+<li>取<span class="arithmatex">\({{(V_{GS}-V_{TH})_4}}\)</span>=240mV,求解<span class="arithmatex">\(M_4\)</span>与<span class="arithmatex">\(M_3\)</span>尺寸过程如下：</li>
+</ul>
+<div class="arithmatex">\[
+\begin{gather}
+I_{D} = \frac{1}{2}\mu_{n}C_{ox}(W/L)_{3}(V_{GS}-V_{TH})^{2} = 100 \mu A \\[10pt]
+\mu_n C_{ox} \approx 300 \, \mu A/V^2 \\[10pt]
+(V_{GS} - V_{TH})_4 = 0.24 \, V \\[10pt]
+WL = 576 \, \mathrm{\mu m}^2
+\end{gather}
+\]</div>
+<ul>
+<li>解得</li>
+</ul>
+<div class="arithmatex">\[ 
+\begin{align}
+  \frac{W}{L}=16.66  \\[10pt]
+  L_{3,4}=5.9\mu  \\[10pt]
+  W_{3,4}=98u  \\[10pt]
+\end{align}
+\]</div>
+<ul>
+<li><span class="arithmatex">\({{(V_{SG}-V_{TH})_2}}\)</span>=120mV,求解<span class="arithmatex">\(M_1\)</span>与<span class="arithmatex">\(M_2\)</span>尺寸过程如下：</li>
+</ul>
+<div class="arithmatex">\[
+\begin{gather}
+  I_{D}=\frac{1}{2}\mu_{p}C_{ox}(W/L)_{2}(V_{SG}-V_{TH})^{2}=100\mu A \\[10pt]
+  \mu_pC_{ox}\approx50 μA/V^2 \\[10pt]
+  {{(V_{GS}-V_{TH})_2}}=0.12V \\[10pt]
+  WL = 576~\mathrm{\mu m}^2   
+\end{gather} 
+\]</div>
+<ul>
+<li>解得</li>
+</ul>
+<div class="arithmatex">\[
+\begin{gather}
+  \frac{W}{L}=278  \\[10pt]
+  L_{3,4}=1.44\mu \\[10pt]
+  W_{3,4}=400u
+\end{gather}
+\]</div>
+<h2 id="三仿真验证">三、仿真验证<a class="headerlink" href="#三仿真验证" title="Permanent link">&para;</a></h2>
+<ul>
+<li>按照设计参数搭建电路图如下</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_21-58-44.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_21-58-44.jpg" width="75%"></a></p>
+<p align="center">
+图2：五管OTA仿真电路
+</p>
+
+<ul>
+<li>op仿真结果如下，<span class="arithmatex">\(g_m\)</span>达到要求，管子工作在饱和区。</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-03-21.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-03-21.jpg" width=75%></a></p>
+<p align="center">
+图3：op仿真
+</p>
+
+<ul>
+<li>加载蒙特卡罗仿真，并对0.9V时的共模电压进行处理，结果如下：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-09-44.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-09-44.jpg" width="75%"></a></p>
+<p align="center">
+图4:400次蒙特卡罗仿真结果的直方图分布
+</p>
+
+<p>可以看出，未达到0.25m的实验要求，需要进一步迭代参数</p>
+<h2 id="四迭代电路">四、迭代电路<a class="headerlink" href="#四迭代电路" title="Permanent link">&para;</a></h2>
+<ul>
+<li>实验值是理论的大约2倍，考虑到WL与<span class="arithmatex">\(\sigma_{V_{\mathrm{OS}}}^2\)</span>的反比关系，WL将变成原来的4倍，为保证静态工作点稳定现将PMOS管W和L同等扩大到原来的2倍，设计电路图如下：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-18-01.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-18-01.jpg" width="75%"></a></p>
+<p align="center">
+图5:调整后的电路
+</p>
+
+<ul>
+<li>蒙特卡洛仿真结果如下：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-21-15.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-21-15.jpg" width="75%"></a></p>
+<p align="center">
+图6:400次蒙特卡罗仿真结果的直方图分布
+</p>
+
+<ul>
+<li>可以看到，指标改善<span class="arithmatex">\(\frac{500}{360}\)</span>=1.38倍，而<span class="arithmatex">\(\frac{360}{250}\)</span>=1.44，照此趋势，还需将PMOS管子的宽长同比扩大2倍多一些，在这里选择将POMS宽长比再同时扩大2.5倍，设计电路如下</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-27-13.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-27-13.jpg" width="75%"></a></p>
+<p align="center">
+图7:第二版迭代电路
+</p>
+
+<ul>
+<li>蒙特卡洛仿真结果如下，可以看出<span class="arithmatex">\({\sigma_{V_{THP}}}\)</span>=0.245m&lt;0.25m，满足要求：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-30-48.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-30-48.jpg" width="75%"></a></p>
+<p align="center">
+图8:400次蒙特卡罗仿真结果的直方图分布
+</p>
+
+<ul>
+<li>op仿真检查静态工作点，结果如下,所有管子正常工作，<span class="arithmatex">\(g_m\)</span>=1.53m&gt;1m，满足要求：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-35-25.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-35-25.jpg" width="75%"></a></p>
+<p align="center">
+图9:终版电路的静态工作点检查
+</p>
+
+<h2 id="五实验总结">五、实验总结<a class="headerlink" href="#五实验总结" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>理论计算与初步设计</strong>：基于五管OTA的结构特点，首先分析了影响失调电压的主要因素，并通过调整晶体管的尺寸，使得跨导满足设计需求。初步设计忽略了<strong>尺寸失调</strong>的影响，集中于<strong>阈值电压失调</strong>的计算，以满足失调电压接近正态分布的要求。</li>
+<li><strong>仿真验证</strong>：在初步设计参数的基础上，进行电路仿真验证，确认电路在饱和区内工作。通过蒙特卡罗仿真模拟随机失调的分布情况，发现初始设计未达到失调电压小于0.25 mV的指标，需进一步优化参数。</li>
+<li><strong>参数迭代优化</strong>：通过多次调整晶体管的宽长比，<strong>特别是增加PMOS管的宽长尺寸</strong>，逐步降低了失调电压。最终设计通过再次迭代将PMOS管的宽长比扩大2.5倍，仿真结果达到0.245 mV，符合实验指标。</li>
+<li><strong>失调电压的本质与其影响</strong>：运算放大器的失调电压直接影响其性能，尤其在高精度应用中，如信号处理、模数转换等领域。五管OTA的失调电压源于两类因素：一是<strong>随机性失调</strong>，包括器件匹配偏差、制造工艺波动等；二是<strong>系统性失调</strong>，主要因电路布局和器件尺寸的设计不当引起。本次实验从这些失调的本质出发，优化电路设计参数，使其接近理想状态，对高精度电路设计具有重要的借鉴意义。</li>
+<li><strong>精密电路设计中的迭代优化方法</strong>：在电路设计中，特别是高精度电路设计中，往往需要多次迭代优化。这一实验中，我们采取了两次主要的器件尺寸迭代调整，通过<strong>增大PMOS的宽长尺寸</strong>来降低失调电压。</li>
+</ul>
 
 
 
@@ -1151,14 +1546,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
       
-        <script src="../_js/extra.js"></script>
+        <script src="../../../_js/extra.js"></script>
       
-        <script src="../_js/katex.js"></script>
+        <script src="../../../_js/katex.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       

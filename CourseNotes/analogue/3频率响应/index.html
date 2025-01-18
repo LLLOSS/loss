@@ -8,24 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/blog/">
+        <link rel="canonical" href="https://mydomain.org/mysite/CourseNotes/analogue/3%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94/">
       
       
+        <link rel="prev" href="../4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/">
       
       
-      <link rel="icon" href="../images/heidashuai_yuan.png"">
+        <link rel="next" href="../2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/">
+      
+      
+      <link rel="icon" href="../../../images/heidashuai_yuan.png"">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
-        <title>Blog - LOSS's Notebook</title>
+        <title>频率响应 - LOSS's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -85,15 +89,15 @@
       
     
     
-      <link rel="stylesheet" href="../_css/flink.css">
+      <link rel="stylesheet" href="../../../_css/flink.css">
     
-      <link rel="stylesheet" href="../_css/counter.css">
+      <link rel="stylesheet" href="../../../_css/counter.css">
     
-      <link rel="stylesheet" href="../_css/custom.css">
+      <link rel="stylesheet" href="../../../_css/custom.css">
     
-      <link rel="stylesheet" href="../_css/tasklist.css">
+      <link rel="stylesheet" href="../../../_css/tasklist.css">
     
-      <link rel="stylesheet" href="../_css/card.css">
+      <link rel="stylesheet" href="../../../_css/card.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -101,14 +105,14 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -117,7 +121,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -134,7 +138,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#频率响应" class="md-skip">
           跳转至
         </a>
       
@@ -148,7 +152,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="LOSS&#39;s Notebook" class="md-header__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-header__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
@@ -168,7 +172,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              频率响应
             
           </span>
         </div>
@@ -256,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -272,11 +276,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../CourseNotes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -296,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-tabs__link">
+        <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-tabs__link">
           
   
     
@@ -331,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="LOSS&#39;s Notebook" class="md-nav__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
+    <a href="../../.." title="LOSS&#39;s Notebook" class="md-nav__button md-logo" aria-label="LOSS's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"/></svg>
@@ -382,7 +388,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href=".." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -414,6 +420,8 @@
       
   
   
+    
+  
   
   
     
@@ -434,19 +442,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -457,13 +468,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             学研札记
@@ -476,8 +487,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -509,11 +522,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -527,7 +540,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             模电
@@ -541,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/" class="md-nav__link">
+      <a href="../11%E7%94%B5%E9%98%BB%E5%A4%B1%E9%85%8D%E5%AF%B9%20CMRR%20%E7%9A%84%E5%BD%B1%E5%93%8D%E5%88%86%E6%9E%90%E5%8F%8A%E4%BB%BF%E7%9C%9F%E9%AA%8C%E8%AF%81/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/10%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%BE%93%E5%85%A5%E7%AD%89%E6%95%88%E5%A4%B1%E8%B0%83%E7%94%B5%E5%8E%8B%E4%BC%98%E5%8C%96/" class="md-nav__link">
+      <a href="../10%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%BE%93%E5%85%A5%E7%AD%89%E6%95%88%E5%A4%B1%E8%B0%83%E7%94%B5%E5%8E%8B%E4%BC%98%E5%8C%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
+      <a href="../9MOSFET%E5%99%AA%E5%A3%B0%E7%89%B9%E6%80%A7%E7%9A%84%E6%A0%87%E5%AE%9A%E4%B8%8E%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E5%99%AA%E5%A3%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../8%E5%AF%86%E5%8B%92%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../6%E5%85%B1%E6%BA%90%E5%85%B1%E6%A0%85%E7%94%B5%E6%B5%81%E9%95%9C%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../5%E5%8D%95%E6%9E%81NMOS%E5%85%B1%E6%BA%90%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/" class="md-nav__link">
+      <a href="../4MOSFET%E7%9A%84%E5%BC%B1%E5%8F%8D%E5%9E%8B%E5%8C%BA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,10 +719,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/3%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    频率响应
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -718,6 +751,110 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验过程" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验过程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实验过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#原始电路图如下" class="md-nav__link">
+    <span class="md-ellipsis">
+      原始电路图如下
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="原始电路图如下">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#原理分析" class="md-nav__link">
+    <span class="md-ellipsis">
+      原理分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#改进电路" class="md-nav__link">
+    <span class="md-ellipsis">
+      改进电路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#改进方法一" class="md-nav__link">
+    <span class="md-ellipsis">
+      改进方法一
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#改进方法二" class="md-nav__link">
+    <span class="md-ellipsis">
+      改进方法二
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -730,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../2%E4%BA%94%E7%AE%A1OTA%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/analogue/1%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../1%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +938,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -858,7 +995,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CourseNotes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -938,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/quantum/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+      <a href="../../quantum/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CourseNotes/quantum/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+      <a href="../../quantum/%E6%B3%A2%E5%87%BD%E6%95%B0%E3%80%81Dirac%E8%A1%A8%E7%A4%BA%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%AF%B9%E6%AF%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1037,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-nav__link">
+      <a href="../../../Reflections/The%20First%20Echo%20of%20LOSS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,6 +1215,98 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验过程" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验过程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实验过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#原始电路图如下" class="md-nav__link">
+    <span class="md-ellipsis">
+      原始电路图如下
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="原始电路图如下">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#原理分析" class="md-nav__link">
+    <span class="md-ellipsis">
+      原理分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#改进电路" class="md-nav__link">
+    <span class="md-ellipsis">
+      改进电路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#改进方法一" class="md-nav__link">
+    <span class="md-ellipsis">
+      改进方法一
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#改进方法二" class="md-nav__link">
+    <span class="md-ellipsis">
+      改进方法二
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1094,7 +1323,86 @@
   
 
 
-<h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
+<h1 id="频率响应">频率响应<a class="headerlink" href="#频率响应" title="Permanent link">&para;</a></h1>
+<p><center> <div style="height:2mm"><div style="fong-family:华文楷体;font-size:12pt;">
+2024.6.28
+</center></p>
+<h2 id="实验目的">实验目的<a class="headerlink" href="#实验目的" title="Permanent link">&para;</a></h2>
+<ul>
+<li>学习交流小信号仿真工具的基本操作</li>
+<li>理解传输函数、零点和极点的含义</li>
+<li>掌握对零极点进行搬移或补偿的方法</li>
+</ul>
+<h2 id="实验要求">实验要求<a class="headerlink" href="#实验要求" title="Permanent link">&para;</a></h2>
+<p>设计如下图所示的电路，参数如第二张图片。 </p>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-27-07.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-27-07.png"></a></p>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-31-02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-31-02.png"></a></p>
+<p>观察幅频和相频曲线，尝试方法改进幅频和相频的衰减</p>
+<h2 id="实验过程">实验过程<a class="headerlink" href="#实验过程" title="Permanent link">&para;</a></h2>
+<h3 id="原始电路图如下">原始电路图如下<a class="headerlink" href="#原始电路图如下" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-40-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-40-10.png"></a></p>
+</li>
+<li>
+<p>幅频和相频特性如下：</p>
+</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-48-06.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-48-06.png" width="75%"></a></p>
+<ul>
+<li>可以发现相位发生了两次位移</li>
+</ul>
+<h4 id="原理分析">原理分析<a class="headerlink" href="#原理分析" title="Permanent link">&para;</a></h4>
+<ul>
+<li>对于如下图所示的电路</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-51-06.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_16-51-06.png"></a></p>
+<ul>
+<li>其增益表达式为</li>
+</ul>
+<p><span class="arithmatex">\(\frac{V_{out}}{V_{in}}\)</span>=<span class="arithmatex">\(\frac{(sC_c-g_{m1})(r_{o1}||r_{o2})}{s^2(r_{o1}||r_{o2})R_{s}C_{c}C_{L}+s\{(r_{o1}||r_{o2})(C_{c}C_{L})+R_{s}C_{c}[1+g_{m1}(r_{o1}||r_{o2})]\}+1}\)</span></p>
+<ul>
+<li>采用主极点近似</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_17-06-41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_17-06-41.png"></a></p>
+<p>​   </p>
+<h3 id="改进电路">改进电路<a class="headerlink" href="#改进电路" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_17-51-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_17-51-24.png"></a></p>
+<h3 id="改进方法一">改进方法一<a class="headerlink" href="#改进方法一" title="Permanent link">&para;</a></h3>
+<ul>
+<li>消除零点</li>
+</ul>
+<div class="arithmatex">\[
+1 - g_{m1} R_z = 0
+\]</div>
+<div class="arithmatex">\[
+w_z = \infty
+\]</div>
+<div class="arithmatex">\[
+R_z = \frac{1}{g_{m1}}
+\]</div>
+<ul>
+<li>设计电路图如下</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_18-01-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_18-01-35.png"></a></p>
+<ul>
+<li>仿真结果如下：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_18-05-30.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_18-05-30.png"></a></p>
+<h3 id="改进方法二">改进方法二<a class="headerlink" href="#改进方法二" title="Permanent link">&para;</a></h3>
+<ul>
+<li>将w<sub>z</sub>设为左半平面零点，则其相移效果与极点相反，令w<sub>z</sub>与w<sub>p2</sub>的相移效果抵消</li>
+</ul>
+<div class="arithmatex">\[\frac{g_{m1}}{(g_{m1}R_{z}-1)}= \frac{g_{m1}}{C_{L}}\]</div>
+<div class="arithmatex">\[R_{z} = \frac{C_{c}+C_{L}}{g_{m1}C_{c}}\]</div>
+<ul>
+<li>设计电路图如下</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_18-13-37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_18-13-37.png"></a></p>
+<ul>
+<li>仿真结果如下：</li>
+</ul>
+<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_18-14-59.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-28_18-14-59.png"></a></p>
 
 
 
@@ -1151,14 +1459,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
       
-        <script src="../_js/extra.js"></script>
+        <script src="../../../_js/extra.js"></script>
       
-        <script src="../_js/katex.js"></script>
+        <script src="../../../_js/katex.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       
