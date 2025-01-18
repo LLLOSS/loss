@@ -1323,9 +1323,11 @@
 </ul>
 <h2 id="实验要求">实验要求<a class="headerlink" href="#实验要求" title="Permanent link">&para;</a></h2>
 <p>设计如图所示的五管OTA电路，通过调整PMOS和NMOS的尺寸，使得达到如下的设计指标</p>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-42-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-42-27.png" ></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-42-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-42-27.png" ></a></div>
+
 <p>设计指标如下：</p>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-44-47.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-44-47.png" width=30%></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-44-47.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-44-47.png" width=30%></a></div>
+
 <h2 id="实验原理及内容">实验原理及内容<a class="headerlink" href="#实验原理及内容" title="Permanent link">&para;</a></h2>
 <h3 id="设计m_34的尺寸">设计<span class="arithmatex">\(M_{3,4}\)</span>的尺寸<a class="headerlink" href="#设计m_34的尺寸" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1392,13 +1394,16 @@ V_{GS5} - V_{TH5} = 0.2V，即V_{P} &gt; 0.2V
 <li>对于<span class="arithmatex">\(M_{6}\)</span> 不妨设置一个1:1电流镜，让<span class="arithmatex">\((\frac{W}{L})_{6}\)</span> =<span class="arithmatex">\((\frac{W}{L})_{5}\)</span> = 13.33</li>
 </ul>
 <h3 id="设计电路图如下">设计电路图如下<a class="headerlink" href="#设计电路图如下" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_11-59-31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_11-59-31.png"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_11-59-31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_11-59-31.png"></a></div>
+
 <ul>
 <li>将直流共模电平设置为vcm，将vcm从0.9V到1.4V每0.1V设置一个点，就会有6次<span class="arithmatex">\(V_{in}\)</span>的输入，对应6条<span class="arithmatex">\(V_{out}\)</span> 的输出。</li>
 </ul>
 <p>如下图所示</p>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-46-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-46-14.png"></a></p>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-47-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-47-35.png"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-46-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-46-14.png"></a></div>
+
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-47-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-47-35.png"></a></div>
+
 <ul>
 <li>发现<span class="arithmatex">\(V_{in}\)</span>至少在大于1.3V之后增益就掉到200以下。</li>
 </ul>
@@ -1420,11 +1425,13 @@ V_{GS5} - V_{TH5} = 0.2V，即V_{P} &gt; 0.2V
 <p>通过减小电流来增大输出电阻</p>
 </li>
 <li>
-<p>选择减小电流<span class="arithmatex">\(I_{D}\)</span> ，将电流源80uA减小为60uA。重复之前的仿真操作，得到的电路和数据如下：<a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-04-29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-04-29.png"></a></p>
+<p>选择减小电流<span class="arithmatex">\(I_{D}\)</span> ，将电流源80uA减小为60uA。重复之前的仿真操作，得到的电路和数据如下：<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-04-29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-04-29.png"></a></div></p>
 </li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-05-59.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-05-59.png"></a></p>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-07-36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-07-36.png"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-05-59.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-05-59.png"></a></div>
+
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-07-36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-07-36.png"></a></div>
+
 <ul>
 <li>可以看到，这次增益均达到了200，在Vcm=0.9V和1.4V时进行op仿真，发现所有MOS管均在饱和区。至此，所有要求均已完成。</li>
 </ul>

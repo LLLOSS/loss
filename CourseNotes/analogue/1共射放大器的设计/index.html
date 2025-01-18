@@ -1131,7 +1131,7 @@
 
 其他建议参数值：交流小信号频率1kHz，交流小信号赋值1mV，耦合电容值10μF。
 
-<a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage-20240404111224612.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage-20240404111224612.png"  width="50%"></a>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage-20240404111224612.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage-20240404111224612.png"  width="50%"></a></div>
 
 设计要求：
 
@@ -1158,14 +1158,14 @@
 
 - 设计如图所示的电路图，参数标注在图上，并仿真结果如下：
 
-  <a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_14-56-51.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_14-56-51.png" width ="50%"></a>
+  <div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_14-56-51.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_14-56-51.png" width ="50%"></a></div>
 
 - ​可以看出，增益|A<sub>v</sub>|=$\frac{V_{out_p-p}}{V_{in_p-p}}$=$\frac{181mV}{1.86mV}$≈97
 与110接近但有差距，具体原因是在计算过程中为了简化计算用了几次近似。但这种近似是有必要的，可以是我们的电路的范围调到一个相对精确的一个区间，从而避免了毫无头绪地乱调参数。
 
 - 再次从增益表达式|A<sub>v</sub>|=$\frac{β(R_{C}∥R_{L})}{r_{be}}$入手,R<sub>L</sub>已经固定，不妨增大R<sub>C</sub>的值将其1400欧姆后仿真结果如下：
 
-  <a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_15-30-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_15-30-18.png" width="50%"></a>
+  <div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_15-30-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_15-30-18.png" width="50%"></a></div>
 
 - 此时增益|A<sub>v</sub>|=$\frac{V_{out_p-p}}{V_{in_p-p}}$=$\frac{208mV}{1.861mV}$≈112,达到设计要求。
 
@@ -1175,7 +1175,7 @@
 
 - 尝试将R<sub>B</sub>降低至10k，仿真结果如下:
 
-  <a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedundefinedundefinedSnipaste_2024-04-14_15-59-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedundefinedundefinedSnipaste_2024-04-14_15-59-27.png" width="50%"></a>
+  <div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedundefinedundefinedSnipaste_2024-04-14_15-59-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedundefinedundefinedSnipaste_2024-04-14_15-59-27.png" width="50%"></a></div>
 
   ​ 此时增益|A<sub>v</sub>|=$\frac{V_{out_p-p}}{V_{in_p-p}}$=$\frac{757μV}{228μV}$≈3.3，几乎失去放大能力。
 
@@ -1183,7 +1183,7 @@
 
 - 示波器波形如下：
 
-<a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_16-14-51.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_16-14-51.png" width="50%"></a>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_16-14-51.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-04-14_16-14-51.png" width="50%"></a></div>
 
 ​       可以看出，output的曲线上下的幅值是不同的，证明越过了摆幅，发生了饱和失真
 

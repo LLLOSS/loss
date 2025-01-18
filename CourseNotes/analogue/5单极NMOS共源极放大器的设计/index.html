@@ -1295,7 +1295,8 @@ g_m=\frac{\partial I_D}{\partial V_{GS}}
 <li>低功耗电路设计：在需要低功耗的电路中，设计师会希望选择高<span class="arithmatex">\(\frac{g_m}{I_D}\)</span> 的工作点(弱反转区或亚阈值区),以实现高能效。</li>
 <li>高速电路设计：在高速电路(如高频放大器)中，设计师会选择低<span class="arithmatex">\(\frac{g_m}{I_D}\)</span>的工作点 (强反转区),以实现更高的速度和带宽。</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-29-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-29-23.png" width="80%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-29-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-29-23.png" width="80%"></a></div>
+
 <p align="center">
 图1：g<sub>m</sub>/I<sub>DS</sub>与I<sub>DS</sub>/I<sub>DSt</sub>的关系
 </p>
@@ -1303,7 +1304,8 @@ g_m=\frac{\partial I_D}{\partial V_{GS}}
 <ul>
 <li></li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-40-54.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-40-54.png" width="85%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-40-54.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-40-54.png" width="85%"></a></div>
+
 <p align="center">
 图2：不同区域下的特征频率及跨导
 </p>
@@ -1312,7 +1314,8 @@ g_m=\frac{\partial I_D}{\partial V_{GS}}
 <ul>
 <li>综合特征频率和自增益的要求，并尽可能降低功耗，选取<span class="arithmatex">\(\frac{g_m}{I_D}\)</span> = 10作为本次设计的跨导效率。查阅教材附录，为保证15GHz的特征频率和50倍的自增益，选取L=250nm的沟道长度，为方便后续调试不妨将<span class="arithmatex">\(\frac{W}{L}\)</span>设为1。设计电路图如下</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-23-40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-23-40.png" width="75%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-23-40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-23-40.png" width="75%"></a></div>
+
 <p align="center">
 图3：初始电路
 </p>
@@ -1320,7 +1323,8 @@ g_m=\frac{\partial I_D}{\partial V_{GS}}
 <ul>
 <li>为了找到<span class="arithmatex">\(\frac{g_m}{I_D}\)</span> = 10的偏置电压<span class="arithmatex">\(V_{dc}\)</span>,设计DC仿真，并将<span class="arithmatex">\(\frac{g_m}{I_D}\)</span> - 10 作为输出函数，这样只需找仿真图像的零点即可。仿真参数和波形图如下：</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-43-55.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-43-55.png" width="100%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-43-55.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-43-55.png" width="100%"></a></div>
+
 <p align="center">
 图4：仿真求解Vdc
 </p>
@@ -1329,7 +1333,8 @@ g_m=\frac{\partial I_D}{\partial V_{GS}}
 <ul>
 <li>将<span class="arithmatex">\(<span class="arithmatex">\(V_{dc}\)</span>\)</span>设置为570mV后，进行op仿真，结果如下</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-51-31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-51-31.png" width="50%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-51-31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-51-31.png" width="50%"></a></div>
+
 <p align="center">
 图5：op仿真结果(关键数据已圈出)
 </p>
@@ -1344,7 +1349,8 @@ A_{0}=\frac{g_{m}}{g_{ds}}=\frac{50.4278u}{787.9879n}=64
 <ul>
 <li>接下来检查特征频率，仿真参数和波形图如下：</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined117710c350deb8b6956f9a19b65e806.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined117710c350deb8b6956f9a19b65e806.png"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined117710c350deb8b6956f9a19b65e806.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined117710c350deb8b6956f9a19b65e806.png"></a></div>
+
 <p align="center">
 图6：特征频率的仿真参数和波形图
 </p>
@@ -1381,7 +1387,8 @@ $$</p>
 <ul>
 <li>修改沟道长度之后，其余参数不变，再分别进行op仿真和AC仿真，并将结果整合在一张图，如下图所示</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_20-17-46.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_20-17-46.png"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_20-17-46.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_20-17-46.png"></a></div>
+
 <p align="center">
 图7：op仿真和AC仿真的结果
 </p>

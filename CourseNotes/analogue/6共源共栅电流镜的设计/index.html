@@ -1240,7 +1240,7 @@
 <ul>
 <li>如下图所示的共源共栅电流镜中，假设晶体管<span class="arithmatex">\(M_{1}\&amp;M_{2}\)</span>的过驱动电压 <span class="arithmatex">\((V_{GS}-V_{TH})_{1,2}=300mV\)</span>, <span class="arithmatex">\(M_{3}\&amp;M_{4}\)</span>的过驱动电压 <span class="arithmatex">\((V_{GS}-V_{TH})_{3,4}=100mV\)</span> ,所有晶体管的阈值电压 <span class="arithmatex">\(V_{TH}=400mV\)</span> ,理论求解<span class="arithmatex">\(V_{B}\)</span>的取值范围。</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage.png" width="50%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedimage.png" width="50%"></a></div>
 <p align="center">
 图1：共源共栅电流镜
 </p>
@@ -1283,7 +1283,7 @@ V_{B}-V_{GS_3}=V_{M_{1}\_D}\ &gt;\ V_{GS_{1}}-V_{TH_1}
 </ul>
 <h2 id="四电路搭建">四、电路搭建<a class="headerlink" href="#四电路搭建" title="Permanent link">&para;</a></h2>
 <p>参照上学期的实验电路，选取<span class="arithmatex">\(I_{REF}\)</span>=100uA,作为电流源电流大小，<span class="arithmatex">\(\frac{W}{L}\)</span>=<span class="arithmatex">\(\frac{1um}{180nm}\)</span>，设计电路如图所示</p>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_19-59-02.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_19-59-02.jpg"></a></p>
+<p><div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_19-59-02.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_19-59-02.jpg"></a></div></p>
 <p align="center">
 图2：原始电流
 </p>
@@ -1292,12 +1292,12 @@ V_{B}-V_{GS_3}=V_{M_{1}\_D}\ &gt;\ V_{GS_{1}}-V_{TH_1}
 <ul>
 <li>对题目要求的<span class="arithmatex">\(V_{B}\)</span>(在图2中为v0，也即vdc)，进行DC扫描，以<span class="arithmatex">\(I_{out}-100uA\)</span>作为输出，参数设置和仿真图像分别如图3和图4</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-05-59.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-05-59.jpg"  width="40%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-05-59.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-05-59.jpg"  width="40%"></a></div>
 <p align="center">
 图3：DC仿真参数
 </p>
 
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedded4ad38-5761-4f9d-a4e0-6b0b6b1f5cbb.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedded4ad38-5761-4f9d-a4e0-6b0b6b1f5cbb.png"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedded4ad38-5761-4f9d-a4e0-6b0b6b1f5cbb.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedded4ad38-5761-4f9d-a4e0-6b0b6b1f5cbb.png"></a></div>
 <p align="center">
 图4： I_out-100uA 关于Vdc的图像
 </p>
@@ -1306,7 +1306,7 @@ V_{B}-V_{GS_3}=V_{M_{1}\_D}\ &gt;\ V_{GS_{1}}-V_{TH_1}
 <ul>
 <li>对于<span class="arithmatex">\(V_{B}\)</span>的下限，通过对<span class="arithmatex">\(V_{B}\)</span>为1V时的op仿真，发现会使靠下的两个管子M1,M2处于线性区。考虑<span class="arithmatex">\(V_{B}\)</span>在1.1V,1.2V,1.3V,及以后的点挨个仿真，发现1.2V以后，M1,M2成功进入饱和区，<span class="arithmatex">\(V_{B}\)</span>=1.2V的op仿真结果如下：</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_21-10-20.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_21-10-20.jpg" width="90%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_21-10-20.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_21-10-20.jpg" width="90%"></a></div>
 <p align="center">
 图5：Vb=Vdc=1.2V时op仿真结果
 </p>
@@ -1314,7 +1314,7 @@ V_{B}-V_{GS_3}=V_{M_{1}\_D}\ &gt;\ V_{GS_{1}}-V_{TH_1}
 <ul>
 <li>对于<span class="arithmatex">\(V_{B}\)</span>的上限，从图中较难估计出来。首先考虑<span class="arithmatex">\(V_{B}\)</span>在1.3V,1.4V，1.5V，1.6V，1.7V这几个固定点进行op仿真，发现在1.6V及以后，mos管出现进入线性区的情况。如下图</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined405749ff-f1e5-4af9-ab9c-d05d59b944d6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined405749ff-f1e5-4af9-ab9c-d05d59b944d6.png" width="90%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined405749ff-f1e5-4af9-ab9c-d05d59b944d6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined405749ff-f1e5-4af9-ab9c-d05d59b944d6.png" width="90%"></a></div>
 <p align="center">
 图6：Vb=Vdc=1.6V时op仿真结果
 </p>
@@ -1328,7 +1328,7 @@ V_{B}-V_{GS_3}=V_{M_{1}\_D}\ &gt;\ V_{GS_{1}}-V_{TH_1}
 </li>
 </ul>
 <div align="center">
-    <a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-49-57.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-49-57.jpg" width="90%"></a>
+    <div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-49-57.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-22_20-49-57.jpg" width="90%"></a></div>
 <p align="center">
 图7：Vb=Vdc=1500mV时op仿真结果
 </p>
@@ -1338,7 +1338,7 @@ V_{B}-V_{GS_3}=V_{M_{1}\_D}\ &gt;\ V_{GS_{1}}-V_{TH_1}
 
 - 向AI求助，结果如下：
 
-  <a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedchat_screenshot%20(3)(1).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedchat_screenshot%20(3)(1).png" width="100%"></a>
+  <div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedchat_screenshot%20(3)(1).png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedchat_screenshot%20(3)(1).png" width="100%"></a></div>
 <p align="center">
 图8：AI的解释
 </p>

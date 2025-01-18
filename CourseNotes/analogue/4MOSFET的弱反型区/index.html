@@ -1205,20 +1205,24 @@
 <ul>
 <li>首先对NMOS进行分析，设计如题目所示的电路如下</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-26-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-26-11.png" width="80%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-26-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-26-11.png" width="80%"></a></div>
+
 <p>​   进行题目要求的DC仿真，结果如下</p>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-27-44.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-27-44.png" width="100%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-27-44.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-27-44.png" width="100%"></a></div>
+
 <ul>
 <li>分析发现，NMOS的阈值电压<span class="arithmatex">\(V_{TH}\)</span>在0.4V左右，取<span class="arithmatex">\(V_{GS}\)</span>= 0.38V的弱反型区进行分析</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-40-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-40-10.png" width="50%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-40-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-40-10.png" width="50%"></a></div>
+
 <div class="arithmatex">\[
 \eta= \frac{I_{D}}{g_{m,w_{i}}V_{T}}= \frac{1.8253u}{26.5655u*26m}=2.64 
 \]</div>
 <ul>
 <li>将NMOS换成同等尺寸的PMOS，将Vin调整为1.4V，使得Vs-Vd略小于Vth，进行op仿真结果如下</li>
 </ul>
-<p><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-11_00-19-53.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-11_00-19-53.png" width="50%"></a></p>
+<div align="center"><a class="glightbox" href="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-11_00-19-53.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-11_00-19-53.png" width="50%"></a></div>
+
 <div class="arithmatex">\[
 \eta= \frac{I_{D}}{g_{m,w_{i}}V_{T}}= \frac{42.7474n}{994.3032n*26m}=1.65 
 \]</div>
