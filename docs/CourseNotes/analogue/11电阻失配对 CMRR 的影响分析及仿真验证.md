@@ -23,25 +23,25 @@
 
 - 在教材219页11.2.4仿真实验中，最终的五管OTA电路如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_16-53-19.jpg">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_16-53-19.jpg"></div>
 
 <center> 图1：五管OTA电路</center>
 
 - 测试电路如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_16-54-52.jpg">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_16-54-52.jpg"></div>
 
 <center> 图2：测试电路</center>
 
 - 仿真参数设置如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_17-01-48.jpg" width="50%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_17-01-48.jpg" width="50%"></div>
 
 <center>图3：仿真参数</center>
 
 - 测试结果如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_17-04-52.jpg" width="75%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_17-04-52.jpg" width="75%"></div>
 
 <center>图4：测试结果    
 </center>
@@ -52,7 +52,7 @@
 
 - 现要考虑电阻失配对测试得到CMRR的影响，由此修改电路如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_17-20-53.jpg" width="75%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-12_17-20-53.jpg" width="75%"></div>
 
 <center>图5：考虑电阻失配的测试电路</center>
 
@@ -161,7 +161,7 @@ $$
 
 - 通过设置阻值失配误差为±0.1%,跑10000个数据，得到结果如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot412341.png" >
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot412341.png" ></div>
 
 <center>图5：CMRR测量值的分布结果</center>
 
@@ -189,7 +189,7 @@ $$
 
 - 通过设置阻值失配误差为±0.01%,跑10000个数据，得到结果如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplotada.png" >
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplotada.png" ></div>
 
 <center>图6：CMRR测量值的分布结果</center>
 
@@ -216,7 +216,7 @@ $$
 
 - 通过设置阻值失配误差为±0.001%,跑10000个数据，得到结果如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot233.png" >
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot233.png" ></div>
 
 <center>图7：CMRR测量值的分布结果</center>
 
@@ -248,13 +248,13 @@ $$
 
 - 考虑将图5中$R_2$和$R_3$降低0.1%为99.9M，将$R_1$和$R_4$增加0.1%为100.1M。考虑这一失配情况下的仿真结果。
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_16-44-53.jpg" >
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_16-44-53.jpg" ></div>
 
 <center>图8:千分之一电阻失配</center>
 
 - 仿真结果如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_16-50-24.jpg">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_16-50-24.jpg"></div>
 
 <center>图9：千分之一失配下的仿真结果</center>
 
@@ -264,13 +264,13 @@ $$
 
 - 考虑将图5中$R_2$和$R_3$降低0.01%为99.99M，将$R_1$和$R_4$增加0.01%为100.01M。考虑这一失配情况下的仿真结果。
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_16-55-30.jpg" >
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_16-55-30.jpg" ></div>
 
 <center>图10:万分之一电阻失配</center>
 
 - 仿真结果如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_16-54-33.jpg">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_16-54-33.jpg"></div>
 
 <center>图11：万分之一失配下的仿真结果</center>
 
@@ -280,13 +280,13 @@ $$
 
 - 考虑将图5中$R_2$和$R_3$降低0.001%为99.999M，将$R_1$和$R_4$增加0.001%为100.001M。考虑这一失配情况下的仿真结果。
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_17-00-13.jpg" >
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_17-00-13.jpg" ></div>
 
 <center>图12:十万分之一电阻失配</center>
 
 - 仿真结果如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_17-02-22.jpg">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-13_17-02-22.jpg"></div>
 
 <center>图13：十万分之一失配下的仿真结果</center>
 

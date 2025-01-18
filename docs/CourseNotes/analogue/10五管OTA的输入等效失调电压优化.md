@@ -13,7 +13,7 @@
 ## 二、实验要求
 一个五管OTA如图1所示，共模电压为0.9V，设计晶体管的尺寸，使得电路的跨导$g_m$大于1$mA/V$，通过优化晶体管尺寸使等效输入失调电压尽可能接近N（0，$(0.25mV)^2$）的正态分布。
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241104205302.jpg" width="50%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241104205302.jpg" width="50%"></div>
 
 
 <p align="center">
@@ -121,7 +121,7 @@ $$
 
 - 按照设计参数搭建电路图如下
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_21-58-44.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_21-58-44.jpg" width="75%"></div>
 
   
 <p align="center">
@@ -131,7 +131,7 @@ $$
 
 - op仿真结果如下，$g_m$达到要求，管子工作在饱和区。
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-03-21.jpg" width=75%>
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-03-21.jpg" width=75%></div>
 
   
 <p align="center">
@@ -141,7 +141,7 @@ $$
 
 - 加载蒙特卡罗仿真，并对0.9V时的共模电压进行处理，结果如下：
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-09-44.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-09-44.jpg" width="75%"></div>
 
   
 <p align="center">
@@ -155,7 +155,7 @@ $$
 
 - 实验值是理论的大约2倍，考虑到WL与$\sigma_{V_{\mathrm{OS}}}^2$的反比关系，WL将变成原来的4倍，为保证静态工作点稳定现将PMOS管W和L同等扩大到原来的2倍，设计电路图如下：
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-18-01.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-18-01.jpg" width="75%"></div>
 
   
 <p align="center">
@@ -165,7 +165,7 @@ $$
 
 - 蒙特卡洛仿真结果如下：
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-21-15.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-21-15.jpg" width="75%"></div>
 
   
 <p align="center">
@@ -175,7 +175,7 @@ $$
 
 - 可以看到，指标改善$\frac{500}{360}$=1.38倍，而$\frac{360}{250}$=1.44，照此趋势，还需将PMOS管子的宽长同比扩大2倍多一些，在这里选择将POMS宽长比再同时扩大2.5倍，设计电路如下
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-27-13.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-27-13.jpg" width="75%"></div>
 
   
 <p align="center">
@@ -185,7 +185,7 @@ $$
 
 - 蒙特卡洛仿真结果如下，可以看出${\sigma_{V_{THP}}}$=0.245m<0.25m，满足要求：
   
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-30-48.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-30-48.jpg" width="75%"></div>
   
   
 <p align="center">
@@ -195,7 +195,7 @@ $$
 
 - op仿真检查静态工作点，结果如下,所有管子正常工作，$g_m$=1.53m>1m，满足要求：
   
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-35-25.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-11-04_22-35-25.jpg" width="75%"></div>
   
   
 <p align="center">

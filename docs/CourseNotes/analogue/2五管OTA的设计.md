@@ -14,11 +14,11 @@
 
 设计如图所示的五管OTA电路，通过调整PMOS和NMOS的尺寸，使得达到如下的设计指标
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-42-27.png" >
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-42-27.png" ></div>
 
 设计指标如下：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-44-47.png" width=30%>
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_09-44-47.png" width=30%></div>
 
 ##实验原理及内容
 ###设计$M_{3,4}$的尺寸
@@ -90,15 +90,15 @@ $$(\frac{W}{L})_{5} = 13.33$$
 
 ###设计电路图如下
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_11-59-31.png">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_11-59-31.png"></div>
 
 - 将直流共模电平设置为vcm，将vcm从0.9V到1.4V每0.1V设置一个点，就会有6次$V_{in}$的输入，对应6条$V_{out}$ 的输出。
 
   如下图所示
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-46-14.png">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-46-14.png"></div>
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-47-35.png">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_15-47-35.png"></div>
 
   - 发现$V_{in}$至少在大于1.3V之后增益就掉到200以下。
 
@@ -114,11 +114,11 @@ $$(\frac{W}{L})_{5} = 13.33$$
   - 通过增大沟道长度来增大输出电阻，但需保持宽长比不变
   - 通过减小电流来增大输出电阻
 
-- 选择减小电流$I_{D}$ ，将电流源80uA减小为60uA。重复之前的仿真操作，得到的电路和数据如下：<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-04-29.png">
+- 选择减小电流$I_{D}$ ，将电流源80uA减小为60uA。重复之前的仿真操作，得到的电路和数据如下：<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-04-29.png"></div>
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-05-59.png">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-05-59.png"></div>
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-07-36.png">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-06-01_16-07-36.png"></div>
 
 - 可以看到，这次增益均达到了200，在Vcm=0.9V和1.4V时进行op仿真，发现所有MOS管均在饱和区。至此，所有要求均已完成。
 

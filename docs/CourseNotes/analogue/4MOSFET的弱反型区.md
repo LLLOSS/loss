@@ -16,15 +16,15 @@ $$g_{m,w_{i}}=\frac{I_{D}}{\eta{V_{T}}}$$
 
 - 首先对NMOS进行分析，设计如题目所示的电路如下
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-26-11.png" width="80%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-26-11.png" width="80%"></div>
 
 ​	进行题目要求的DC仿真，结果如下
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-27-44.png" width="100%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-27-44.png" width="100%"></div>
 
 - 分析发现，NMOS的阈值电压$V_{TH}$在0.4V左右，取$V_{GS}$= 0.38V的弱反型区进行分析
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-40-10.png" width="50%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-10_23-40-10.png" width="50%"></div>
 
 $$
 \eta= \frac{I_{D}}{g_{m,w_{i}}V_{T}}= \frac{1.8253u}{26.5655u*26m}=2.64 
@@ -32,7 +32,7 @@ $$
 
 - 将NMOS换成同等尺寸的PMOS，将Vin调整为1.4V，使得Vs-Vd略小于Vth，进行op仿真结果如下
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-11_00-19-53.png" width="50%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-11_00-19-53.png" width="50%"></div>
 
 $$
 \eta= \frac{I_{D}}{g_{m,w_{i}}V_{T}}= \frac{42.7474n}{994.3032n*26m}=1.65 

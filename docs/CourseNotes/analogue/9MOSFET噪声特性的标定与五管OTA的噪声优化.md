@@ -23,7 +23,7 @@
 
 ### 1.电路绘制与静态工作点的确定
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-26_23-24-27.jpg" width="50%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-26_23-24-27.jpg" width="50%"></div>
 
 
 <p align="center">
@@ -37,7 +37,7 @@
 
 - 为了获得更精确的结果，将AC仿真点数设置为50/dec，且NOISE仿真间隔数量也为50。参数设置如下:
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-27_19-07-11.jpg" width="75%" >
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-27_19-07-11.jpg" width="75%" ></div>
 
 
 <p align="center">
@@ -49,7 +49,7 @@
 
 - 对比各频率下的NOISE仿真结果可以推断出，PMOS晶体管PM0的转折频率在**200kHz**和**250kHz**之间，如下图所示：
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-27_19-05-25.jpg" width="75%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-27_19-05-25.jpg" width="75%"></div>
 
 
 <p align="center">
@@ -61,7 +61,7 @@
 
 - 首先，op仿真的PMOS参数如下
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-27_00-51-57.jpg" width="30%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-27_00-51-57.jpg" width="30%"></div>
 
 
 <p align="center">
@@ -71,7 +71,7 @@
 
 - AC仿真得到增益$A_0$=50.5
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-27_00-53-56.jpg" width="70%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-27_00-53-56.jpg" width="70%"></div>
 
 
 <p align="center">
@@ -131,7 +131,7 @@ $$
 
 - 对闪烁噪声功率$f_n$和频率$f$取对数后作一元线性拟合，可得到拟合的直线斜率的相反数即为${\alpha_{N}}$。结果如下
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-23-12.jpg" width="80%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-23-12.jpg" width="80%"></div>
 
 
 <p align="center">
@@ -213,7 +213,7 @@ $$
 
 - 由于之前的计算公式错误，导致迭代了很多次误以为没有达到要求但实际上早已满足指标。本次实验的迭代的中间过程数据没有意义，~~主要是也丢失了~~。直接给出最终的电路参数如下
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_16-13-39.jpg">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_16-13-39.jpg"></div>
 
   
 <p align="center">
@@ -223,7 +223,7 @@ $$
 
 - AC仿真如下，增益**$A_{0}$=779**,0db点约为**12Mhz**。
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_20-58-00.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_20-58-00.jpg" width="75%"></div>
 
 
 <p align="center">
@@ -233,7 +233,7 @@ $$
 
 - 噪声仿真的一组数据如下，**鉴于0db点为12MHz，之后的频率意义不大，所以在AC仿真的频率只从1Hz到12MHz**
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-25-32.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-25-32.jpg" width="75%"></div>
 
   
 <p align="center">
@@ -257,7 +257,7 @@ $$
 
 - 为得到更加精确的数据，现将仿真参数调整如下：
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-28-42.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-28-42.jpg" width="75%"></div>
 
   
 <p align="center">
@@ -267,7 +267,7 @@ $$
 
 - 将噪声仿真后的ZTerm的仿真数据做处理：对于每一个频率下的四个MOS器件，将其id和fn分别加起来，作为该频率下的热噪声功率谱密度和闪烁噪声功率谱密度的值。举个例子:
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-34-52.jpg" width=" 55%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-34-52.jpg" width=" 55%"></div>
 
   
 <p align="center">
@@ -317,7 +317,7 @@ $$
 
 - 频率与功率均取线性坐标，拟合图像如下：
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot1.png" >
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot1.png" ></div>
 
   
 <p align="center">
@@ -327,7 +327,7 @@ $$
 
 - 频率取对数坐标，拟合图像如下
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot2.png" >
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot2.png" ></div>
 
   
 <p align="center">
@@ -337,7 +337,7 @@ $$
 
 - 波特图：
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot41.png" >
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot41.png" ></div>
 
   
 <p align="center">
@@ -357,7 +357,7 @@ $$
 
 - 频率和功率均取线性坐标，拟合图像如下：
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot3.png" >
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot3.png" ></div>
 
   
 <p align="center">
@@ -367,7 +367,7 @@ $$
 
 - 频率取对数坐标，拟合图像如下
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot4.png" >
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot4.png" ></div>
 
   
 <p align="center">
@@ -376,7 +376,7 @@ $$
 
 
 - 波特图：
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot47.png" >
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot47.png" ></div>
 
   
 <p align="center">
@@ -402,7 +402,7 @@ $$
 
 - 结果非常Amazing啊。与图9的**1.0113mV**可以说是一模一样，~~我怀疑aether就是这么算的~~
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-25-32.jpg" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-10-30_22-25-32.jpg" width="75%"></div>
 
   
 <p align="center">
@@ -414,7 +414,7 @@ $$
 
 - 热噪声和闪烁噪声的波特图曲线放在一起:
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot79.png" >
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedmyplot79.png" ></div>
 
   
 <p align="center">

@@ -50,7 +50,7 @@
   - 高速电路设计：在高速电路(如高频放大器)中，设计师会选择低$\frac{g_m}{I_D}$的工作点 (强反转区),以实现更高的速度和带宽。
  
 
-<img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-29-23.png" width="80%">
+<div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-29-23.png" width="80%"></div>
 
 
 <p align="center">
@@ -60,7 +60,7 @@
 
 - 
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-40-54.png" width="85%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_16-40-54.png" width="85%"></div>
   
 <p align="center">
 图2：不同区域下的特征频率及跨导
@@ -71,7 +71,7 @@
 
 - 综合特征频率和自增益的要求，并尽可能降低功耗，选取$\frac{g_m}{I_D}$ = 10作为本次设计的跨导效率。查阅教材附录，为保证15GHz的特征频率和50倍的自增益，选取L=250nm的沟道长度，为方便后续调试不妨将$\frac{W}{L}$设为1。设计电路图如下
   
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-23-40.png" width="75%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-23-40.png" width="75%"></div>
 
 <p align="center">
 图3：初始电路
@@ -80,7 +80,7 @@
   
 - 为了找到$\frac{g_m}{I_D}$ = 10的偏置电压$V_{dc}$,设计DC仿真，并将$\frac{g_m}{I_D}$ - 10 作为输出函数，这样只需找仿真图像的零点即可。仿真参数和波形图如下：
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-43-55.png" width="100%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-43-55.png" width="100%"></div>
   
 <p align="center">
 图4：仿真求解Vdc
@@ -91,7 +91,7 @@
 
 - 将$$V_{dc}$$设置为570mV后，进行op仿真，结果如下
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-51-31.png" width="50%">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_17-51-31.png" width="50%"></div>
 
 <p align="center">
 图5：op仿真结果(关键数据已圈出)
@@ -111,7 +111,7 @@ $$
 
 - 接下来检查特征频率，仿真参数和波形图如下：
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined117710c350deb8b6956f9a19b65e806.png">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefined117710c350deb8b6956f9a19b65e806.png"></div>
 
 <p align="center">
 图6：特征频率的仿真参数和波形图
@@ -147,7 +147,7 @@ $$
   
 - 修改沟道长度之后，其余参数不变，再分别进行op仿真和AC仿真，并将结果整合在一张图，如下图所示
 
-  <img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_20-17-46.png">
+  <div align="center"><img src="https://picgo-loss.oss-cn-beijing.aliyuncs.com/undefinedSnipaste_2024-09-17_20-17-46.png"></div>
   
 <p align="center">
 图7：op仿真和AC仿真的结果
